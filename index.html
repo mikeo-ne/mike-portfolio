@@ -1,0 +1,2789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Ensure cross-origin embeds (YouTube/Spotify/Instagram) receive a proper Referer
+         header — without it YouTube returns "video playback configuration error". -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mike 1ne">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Mike 1ne — Sound Engineer &amp; Music Producer | Kampala, Uganda</title>
+    <meta name="description" content="Mike 1ne is a Kampala-based sound engineer and music producer, and CEO of 7H Music Group. Specializing in Afrobeats, Hip Hop, R&amp;B, Amapiano, and Reggae.">
+    <meta name="author" content="Mike 1ne / 7H Music Group">
+    <link rel="canonical" href="./">
+    <!-- Preconnect to third-party hosts we actually use (speeds up embed loads) -->
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="preconnect" href="https://open.spotify.com">
+    <link rel="preconnect" href="https://www.instagram.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://i.ytimg.com">
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:title" content="Mike 1ne — Sound Engineer &amp; Music Producer">
+    <meta property="og:description" content="Kampala-based sound engineer and music producer. CEO of 7H Music Group. Afrobeats, Hip Hop, Amapiano, R&amp;B, Reggae.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mike 1ne">
+    <meta property="og:url" content="./">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:image:secure_url" content="og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mike 1ne — Sound Engineer &amp; Music Producer">
+    <meta name="twitter:description" content="Kampala-based sound engineer and music producer. CEO of 7H Music Group.">
+    <meta name="twitter:image" content="og-image.jpg">
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23f59e0b'/><text x='50' y='68' font-family='Arial,sans-serif' font-size='60' font-weight='900' text-anchor='middle' fill='%23000'>M</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <noscript><style>.reveal{opacity:1!important;}</style></noscript>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+            background: #0a0a0a;
+            /* Disable scroll chaining & overscroll that can cause jank */
+            overscroll-behavior-y: none;
+            /* Prevent iOS from auto-enlarging text in landscape */
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 400;
+            -webkit-tap-highlight-color: transparent;
+            padding-top: env(safe-area-inset-top, 0);
+            padding-bottom: env(safe-area-inset-bottom, 0);
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            /* DO NOT apply translateZ(0) on body — it is the #1 cause of
+               white/black tile patches during scroll on iOS Safari. */
+            -webkit-overflow-scrolling: touch;
+            will-change: auto;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            perspective: none;
+            -webkit-perspective: none;
+            -webkit-perspective-origin: 50% 50%;
+            perspective-origin: 50% 50%;
+        }
+        /* Solid section backgrounds — no GPU promotion to avoid iOS blank tiles */
+        section, .section, .marquee-wrap, footer, .credits-strip, .contact {
+            position: relative;
+            background-color: inherit;
+            /* Explicitly no transform — transforms force compositing layers which
+               cause white patches on iOS when combined with dark backgrounds. */
+            transform: none;
+            -webkit-transform: none;
+        }
+        ::selection { background: #f59e0b; color: #000; }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+        /* Accessible keyboard focus for desktop users navigating with Tab */
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        .nav-cta:focus-visible { outline-offset: 4px; border-radius: 100px; }
+        .social-link:focus-visible, .back-to-top:focus-visible { border-radius: 8px; outline-offset: 2px; }
+        .filter-btn:focus-visible { border-radius: 100px; outline-offset: 2px; }
+
+        :root {
+            --black: #0a0a0a;
+            --black-2: #111111;
+            --black-3: #1a1a1a;
+            --white: #fafafa;
+            --gray-1: #e5e5e5;
+            --gray-2: #a3a3a3;
+            --gray-3: #737373;
+            --gray-4: #525252;
+            --gray-5: #262626;
+            --gray-6: #171717;
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --accent-dark: #d97706;
+            --spotify: #1DB954;
+            --apple: #fc3c44;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+            --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 48px); }
+        /* Ensure touch targets are minimum 44px on mobile per Apple/Google guidelines */
+        @media (pointer: coarse) {
+            .nav-links a, .filter-btn, .social-link, .contact-method { min-height: 44px; }
+            .btn, .form-btn { min-height: 48px; }
+        }
+
+        /* NAV */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 clamp(20px, 4vw, 48px);
+            padding-top: max(0px, env(safe-area-inset-top));
+            transition: background 0.3s var(--ease), backdrop-filter 0.3s var(--ease), border-color 0.3s var(--ease);
+            border-bottom: 1px solid transparent;
+        }
+        .nav.scrolled {
+            background: rgba(10, 10, 10, 0.96);
+            -webkit-backdrop-filter: saturate(180%) blur(16px);
+            backdrop-filter: saturate(180%) blur(16px);
+            border-bottom-color: var(--gray-5);
+        }
+        /* Mobile browsers that don't support backdrop-filter well get a fully solid nav */
+        @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+            .nav.scrolled { background: #0a0a0a; }
+        }
+        .nav-inner {
+            max-width: 1280px; margin: 0 auto; height: 72px;
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px;
+            text-decoration: none; color: var(--white);
+            display: flex; align-items: center; gap: 10px;
+        }
+        .logo-mark {
+            width: 32px; height: 32px; background: var(--accent); border-radius: 6px;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.9rem; color: #000;
+        }
+        .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+        .nav-links a {
+            text-decoration: none; font-size: 0.85rem; font-weight: 500;
+            color: var(--gray-2); transition: color 0.2s; letter-spacing: 0.01em; position: relative;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 1px; background: var(--accent);
+            transition: width 0.3s var(--ease);
+        }
+        .nav-links a:hover { color: var(--white); }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: var(--white); color: #000 !important;
+            padding: 10px 22px; border-radius: 100px; font-weight: 600 !important;
+            font-size: 0.82rem !important; transition: all 0.2s var(--ease) !important;
+        }
+        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { background: var(--accent) !important; transform: translateY(-1px); }
+        .menu-toggle {
+            display: none; width: 40px; height: 40px; flex-direction: column;
+            justify-content: center; align-items: center; gap: 5px;
+            border-radius: 8px; transition: background 0.2s;
+        }
+        .menu-toggle:hover { background: var(--gray-6); }
+        .menu-toggle span {
+            display: block; width: 20px; height: 1.5px; background: var(--white);
+            transition: all 0.3s var(--ease);
+        }
+        .menu-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+        .menu-toggle.open span:nth-child(2) { opacity: 0; }
+        .menu-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+        .mobile-menu {
+            display: none; position: fixed; top: 72px; left: 0; right: 0;
+            background: #0a0a0a;
+            border-bottom: 1px solid var(--gray-5); padding: 24px; z-index: 999;
+            transform: translateY(-10px); opacity: 0;
+            transition: all 0.3s var(--ease);
+            -webkit-overflow-scrolling: touch;
+        }
+        .mobile-menu.open { display: block; opacity: 1; transform: translateY(0); }
+        .mobile-menu ul { list-style: none; }
+        .mobile-menu li { margin-bottom: 4px; }
+        .mobile-menu a {
+            display: block; padding: 14px 0; text-decoration: none; color: var(--gray-1);
+            font-size: 1.05rem; font-weight: 500; border-bottom: 1px solid var(--gray-6);
+            transition: color 0.2s;
+        }
+        .mobile-menu a:hover { color: var(--accent); }
+
+        /* HERO */
+        .hero {
+            position: relative; min-height: 100vh; display: flex; align-items: center;
+            padding: 120px 0 80px; overflow: hidden;
+        }
+        .hero-bg { position: absolute; inset: 0; z-index: 0; }
+        .hero-bg::before {
+            content: ''; position: absolute; inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(120, 53, 15, 0.08) 0%, transparent 50%);
+            z-index: 1;
+        }
+        .hero-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.6) 60%, var(--black) 100%);
+            z-index: 2;
+        }
+        .hero-grid-lines {
+            position: absolute; inset: 0; z-index: 1;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
+            mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
+        }
+        .hero-content { position: relative; z-index: 3; width: 100%; }
+        .hero-label {
+            display: inline-flex; align-items: center; gap: 10px; margin-bottom: 32px;
+            font-size: 0.78rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--accent);
+        }
+        .hero-label .dot {
+            width: 7px; height: 7px; background: var(--accent); border-radius: 50%; position: relative;
+        }
+        .hero-label .dot::after {
+            content: ''; position: absolute; inset: -4px; border-radius: 50%;
+            background: var(--accent); opacity: 0.3;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        @keyframes ping { 75%, 100% { transform: scale(2.5); opacity: 0; } }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 9vw, 7.5rem); font-weight: 700;
+            line-height: 0.95; letter-spacing: -0.025em; margin-bottom: 28px; color: var(--white);
+        }
+        .hero-title .line { display: block; }
+        .hero-title .line span {
+            display: inline-block;
+            opacity: 0; transform: translateY(20px);
+            animation: slideUp 0.8s var(--ease) forwards;
+        }
+        .hero-title .line:nth-child(2) span { animation-delay: 0.15s; }
+        .hero-title .accent { font-style: italic; color: var(--accent); }
+        @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+        .hero-sub {
+            font-size: clamp(1rem, 2vw, 1.2rem); color: var(--gray-2); max-width: 620px;
+            line-height: 1.7; margin-bottom: 44px; font-weight: 300;
+            opacity: 0; animation: fadeIn 0.8s var(--ease) 0.3s forwards;
+        }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .hero-buttons {
+            display: flex; gap: 14px; flex-wrap: wrap;
+            opacity: 0; animation: fadeIn 0.8s var(--ease) 0.45s forwards;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px;
+            border-radius: 100px; font-size: 0.88rem; font-weight: 600; text-decoration: none;
+            transition: all 0.25s var(--ease); letter-spacing: 0.01em;
+        }
+        .btn-dark { background: var(--white); color: #000; }
+        .btn-dark:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(245,158,11,0.25); }
+        .btn-outline { background: transparent; color: var(--white); border: 1px solid var(--gray-4); }
+        .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+        .btn-ghost { background: transparent; color: var(--gray-2); padding: 15px 20px; }
+        .btn-ghost:hover { color: var(--white); }
+        .btn svg { flex-shrink: 0; }
+
+        .scroll-cue {
+            position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+            z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 8px;
+            color: var(--gray-3); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+            opacity: 0; animation: fadeIn 1s var(--ease) 1.2s forwards;
+            text-decoration: none;
+        }
+        .scroll-cue-line {
+            width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gray-4), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.3; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(0.6); transform-origin: top; }
+        }
+
+        /* Marquee */
+        .marquee-wrap {
+            border-top: 1px solid var(--gray-5); border-bottom: 1px solid var(--gray-5);
+            padding: 22px 0; overflow: hidden; background: var(--black-2);
+        }
+        .marquee {
+            display: flex; gap: 60px; animation: marquee 30s linear infinite; white-space: nowrap;
+        }
+        .marquee-item {
+            display: inline-flex; align-items: center; gap: 60px;
+            font-family: 'Playfair Display', serif; font-size: 1.1rem;
+            color: var(--gray-3); font-style: italic;
+        }
+        .marquee-item .sep { color: var(--accent); font-style: normal; font-size: 0.7rem; }
+        @keyframes marquee { to { transform: translateX(-50%); } }
+
+        /* SECTIONS */
+        .section { padding: clamp(80px, 12vw, 140px) 0; position: relative; }
+        .section-header { margin-bottom: clamp(48px, 7vw, 80px); }
+        .section-num {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--accent);
+            letter-spacing: 0.15em; margin-bottom: 16px; display: block;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 600;
+            letter-spacing: -0.02em; line-height: 1.1; color: var(--white); margin-bottom: 20px;
+        }
+        .section-desc {
+            font-size: 1.05rem; color: var(--gray-2); max-width: 620px;
+            line-height: 1.7; font-weight: 300;
+        }
+
+        /* 7H MUSIC GROUP — Executive identity block */
+        .exec-block {
+            background: linear-gradient(135deg, var(--black-2) 0%, #0d0805 100%);
+            border: 1px solid var(--gray-5);
+            border-radius: 10px;
+            padding: clamp(40px, 5vw, 64px) clamp(28px, 4vw, 56px);
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: clamp(32px, 4vw, 64px);
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .exec-block::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .exec-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem; color: var(--accent);
+            letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 14px;
+            display: inline-flex; align-items: center; gap: 8px;
+        }
+        .exec-tag::before {
+            content: ''; width: 20px; height: 1px; background: var(--accent);
+        }
+        .exec-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700;
+            color: var(--white); line-height: 1.05; letter-spacing: -0.02em;
+            margin-bottom: 18px;
+        }
+        .exec-title em { color: var(--accent); font-style: italic; }
+        .exec-desc {
+            font-size: 0.98rem; color: var(--gray-2); line-height: 1.75; font-weight: 300;
+            margin-bottom: 28px;
+        }
+        .exec-pillars {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 24px;
+            margin-bottom: 28px;
+        }
+        .exec-pillar {
+            display: flex; align-items: flex-start; gap: 12px;
+        }
+        .exec-pillar-icon {
+            flex-shrink: 0; width: 32px; height: 32px; border-radius: 6px;
+            background: rgba(245,158,11,0.12); color: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.95rem; margin-top: 2px;
+        }
+        .exec-pillar-label {
+            font-size: 0.88rem; color: var(--white); font-weight: 600; margin-bottom: 3px;
+        }
+        .exec-pillar-sub {
+            font-size: 0.78rem; color: var(--gray-3); line-height: 1.5; font-weight: 300;
+        }
+        .exec-cta {
+            display: inline-flex; align-items: center; gap: 10px;
+            color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600;
+            letter-spacing: 0.02em; transition: gap 0.2s;
+        }
+        .exec-cta:hover { gap: 14px; }
+        .exec-visual {
+            position: relative;
+            aspect-ratio: 1/1; max-width: 320px; margin-left: auto;
+            border: 1px solid var(--gray-5); border-radius: 6px;
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 40px; background: rgba(0,0,0,0.35);
+        }
+        .exec-visual-num {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+            color: var(--gray-4); letter-spacing: 0.2em; text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .exec-visual-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 4vw, 3.2rem); font-weight: 700;
+            color: var(--white); line-height: 1; letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+        .exec-visual-mark span { color: var(--accent); font-style: italic; }
+        .exec-visual-sub {
+            font-size: 0.78rem; color: var(--gray-3); letter-spacing: 0.1em;
+            text-transform: uppercase; font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 22px;
+        }
+        .exec-visual-stats {
+            border-top: 1px solid var(--gray-5); padding-top: 18px;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .exec-stat {
+            display: flex; justify-content: space-between; align-items: baseline;
+            font-size: 0.75rem;
+        }
+        .exec-stat-label {
+            color: var(--gray-4); font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.08em; text-transform: uppercase;
+        }
+        .exec-stat-val { color: var(--white); font-weight: 600; }
+        @media (max-width: 768px) {
+            .exec-block { grid-template-columns: 1fr; padding: 32px 24px; }
+            .exec-pillars { grid-template-columns: 1fr; gap: 14px; }
+            .exec-visual { max-width: 100%; margin: 0; aspect-ratio: auto; padding: 28px; }
+        }
+
+        /* LISTEN GENRE TABS */
+        .listen-tabs {
+            display: inline-flex; gap: 0;
+            background: var(--black-2); border: 1px solid var(--gray-5);
+            border-radius: 100px; padding: 4px; margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .listen-tab {
+            padding: 10px 20px; border-radius: 100px; font-size: 0.8rem; font-weight: 500;
+            color: var(--gray-2); background: transparent; border: none;
+            transition: all 0.2s var(--ease); white-space: nowrap; cursor: pointer;
+            min-height: 36px;
+        }
+        .listen-tab:hover { color: var(--white); }
+        .listen-tab.active {
+            background: var(--white); color: #000; font-weight: 600;
+        }
+        .listen-panel { display: none; }
+        .listen-panel.active { display: block; animation: fadePanel 0.3s var(--ease); }
+        @keyframes fadePanel { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        .listen-note {
+            font-size: 0.78rem; color: var(--gray-3); font-style: italic; margin-top: 20px;
+            font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em;
+        }
+        .listen-extlink {
+            display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px;
+            background: var(--black-2); border: 1px solid var(--gray-5); border-radius: 8px;
+            color: var(--gray-1); text-decoration: none; font-size: 0.85rem; font-weight: 500;
+            transition: all 0.2s var(--ease); margin-top: 12px;
+        }
+        .listen-extlink:hover { border-color: #FF0000; color: #FF0000; }
+        .listen-extlink.yt { border-color: var(--gray-5); }
+        .listen-extlink.yt:hover { border-color: #FF0000; color: #FF0000; }
+        .listen-extlink.apple-link:hover { border-color: var(--apple); color: var(--apple); }
+
+        /* A/B BEFORE/AFTER PLAYER */
+        .ab-section {
+            background: linear-gradient(135deg, #0f0a05 0%, var(--black-2) 100%);
+            border: 1px solid var(--gray-5); border-radius: 10px;
+            padding: clamp(28px, 4vw, 44px); margin-top: 56px;
+            position: relative; overflow: hidden;
+        }
+        .ab-section::before {
+            content: ''; position: absolute;
+            bottom: -60px; left: -60px; width: 220px; height: 220px;
+            background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .ab-header { margin-bottom: 24px; }
+        .ab-tag {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+            color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .ab-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--white);
+            line-height: 1.15; margin-bottom: 8px;
+        }
+        .ab-sub { font-size: 0.88rem; color: var(--gray-2); line-height: 1.6; font-weight: 300; max-width: 580px; }
+        .ab-player {
+            background: var(--black-3); border: 1px solid var(--gray-5); border-radius: 8px;
+            padding: 24px; margin-top: 24px;
+        }
+        .ab-waveform {
+            display: flex; align-items: flex-end; gap: 3px; height: 64px;
+            margin: 0 0 20px; padding: 0 4px;
+        }
+        .ab-wave-bar {
+            flex: 1; background: var(--gray-5); border-radius: 2px 2px 0 0;
+            transition: background 0.3s, height 0.2s;
+        }
+        .ab-state-raw .ab-wave-bar.playing { background: var(--gray-4); }
+        .ab-state-final .ab-wave-bar.playing { background: var(--accent); }
+        .ab-controls {
+            display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+        }
+        .ab-play-btn {
+            width: 48px; height: 48px; border-radius: 50%; background: var(--accent);
+            color: #000; display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; cursor: pointer; border: none;
+            transition: transform 0.15s var(--ease), background 0.15s;
+        }
+        .ab-play-btn:hover { background: var(--accent-light); transform: scale(1.05); }
+        .ab-play-btn svg { width: 16px; height: 16px; margin-left: 2px; fill: currentColor; }
+        .ab-play-btn.playing svg { margin-left: 0; }
+        .ab-toggle-group {
+            display: inline-flex; gap: 0;
+            background: var(--black-2); border: 1px solid var(--gray-5); border-radius: 100px;
+            padding: 3px;
+        }
+        .ab-toggle {
+            padding: 8px 18px; border-radius: 100px; font-size: 0.75rem; font-weight: 600;
+            letter-spacing: 0.05em; cursor: pointer; border: none;
+            background: transparent; color: var(--gray-3);
+            transition: all 0.2s var(--ease); text-transform: uppercase;
+            min-height: 32px;
+        }
+        .ab-toggle.raw.active { background: #4b5563; color: #fff; }
+        .ab-toggle.final.active { background: var(--accent); color: #000; }
+        .ab-meta {
+            margin-left: auto; font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem; color: var(--gray-4); letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .ab-status {
+            margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-5);
+            font-size: 0.82rem; color: var(--gray-3); line-height: 1.6;
+            display: flex; align-items: flex-start; gap: 10px;
+        }
+        .ab-status-icon {
+            flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+            background: rgba(245,158,11,0.15); color: var(--accent);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.7rem; margin-top: 1px;
+        }
+        .ab-status strong { color: var(--white); }
+        @media (max-width: 640px) {
+            .ab-controls { gap: 10px; }
+            .ab-meta { margin-left: 0; width: 100%; text-align: left; }
+        }
+
+        /* EPK DOWNLOAD */
+        .epk-download {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 12px 22px; background: var(--accent); color: #000;
+            border-radius: 100px; font-size: 0.82rem; font-weight: 600;
+            text-decoration: none; transition: all 0.2s var(--ease);
+            margin-top: 8px;
+        }
+        .epk-download:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.3); }
+        .epk-download svg { flex-shrink: 0; }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start;
+        }
+        /* ABOUT photo */
+        .about-image {
+            position: relative; border-radius: 4px; overflow: hidden; aspect-ratio: 4/5;
+            background-color: #0a0a0a;
+        }
+        .about-photo {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; object-position: center top;
+            z-index: 0;
+            filter: saturate(0.95) contrast(1.02);
+        }
+        /* Gradient darken so the tag + quote stay readable */
+        .about-image::after {
+            content: ''; position: absolute; inset: 0; z-index: 1;
+            background: linear-gradient(180deg, rgba(10,10,10,0.15) 0%, rgba(10,10,10,0.1) 40%, rgba(10,10,10,0.75) 100%);
+        }
+        /* Fallback gradient "M1" shown if photo fails to load (removed now that we have real art) */
+        .about-image::before {
+            display: none;
+        }
+        .about-image-inner { position: absolute; bottom: 32px; left: 32px; right: 32px; z-index: 2; }
+        .about-image-tag {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent);
+            letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 10px;
+        }
+        .about-image-quote {
+            font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic;
+            color: var(--white); line-height: 1.4; border-left: 2px solid var(--accent); padding-left: 16px;
+        }
+        .about-text p {
+            font-size: 1.02rem; color: var(--gray-2); line-height: 1.8; margin-bottom: 24px; font-weight: 300;
+        }
+        .about-text p:first-of-type::first-letter {
+            font-family: 'Playfair Display', serif; font-size: 3.4rem; font-weight: 700; float: left;
+            line-height: 0.85; margin-right: 10px; margin-top: 4px; color: var(--accent);
+        }
+        .about-meta {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
+            margin-top: 40px; border-top: 1px solid var(--gray-5); border-bottom: 1px solid var(--gray-5);
+        }
+        .about-meta-item {
+            padding: 22px 0; border-right: 1px solid var(--gray-5);
+        }
+        .about-meta-item:nth-child(even) { border-right: none; padding-left: 24px; }
+        .about-meta-item:nth-child(odd) { padding-right: 24px; }
+        .about-meta-label {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--gray-4);
+            text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px;
+        }
+        .about-meta-value {
+            font-size: 0.95rem; color: var(--white); font-weight: 500;
+        }
+
+        /* SERVICES */
+        /* Services grid: auto-fit with narrower min so it works down to ~320px */
+        .services-list {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1px; background: var(--gray-5); border: 1px solid var(--gray-5);
+            border-radius: 6px; overflow: hidden;
+        }
+        .service-card {
+            background: var(--black-2); padding: 40px 36px;
+            transition: background 0.3s var(--ease); position: relative;
+            text-decoration: none; color: inherit; display: block; cursor: pointer;
+        }
+        .service-card:hover { background: var(--black-3); }
+        .service-card:hover .service-arrow { transform: translate(4px, -4px); opacity: 1; }
+        .service-card:hover .service-icon { color: var(--accent); transform: translateY(-2px); }
+        .service-num {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray-4);
+            margin-bottom: 24px; letter-spacing: 0.1em;
+        }
+        .service-icon {
+            font-size: 1.8rem; margin-bottom: 24px; color: var(--gray-2);
+            transition: all 0.3s var(--ease); display: block;
+        }
+        .service-name {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600;
+            color: var(--white); margin-bottom: 14px;
+            display: flex; align-items: start; justify-content: space-between; gap: 12px;
+        }
+        .service-arrow {
+            font-size: 1.1rem; color: var(--accent); opacity: 0;
+            transition: all 0.3s var(--ease); flex-shrink: 0; margin-top: 4px;
+        }
+        .service-desc {
+            font-size: 0.92rem; color: var(--gray-2); line-height: 1.7; font-weight: 300;
+        }
+        .service-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+        .service-tag {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; padding: 4px 10px;
+            border: 1px solid var(--gray-5); border-radius: 100px; color: var(--gray-3); letter-spacing: 0.05em;
+        }
+
+        /* WORK / DISCOGRAPHY */
+        .work-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
+        .filter-btn {
+            padding: 8px 18px; border-radius: 100px; font-size: 0.8rem; font-weight: 500;
+            color: var(--gray-2); border: 1px solid var(--gray-5); background: transparent;
+            transition: all 0.2s var(--ease);
+        }
+        .filter-btn:hover { border-color: var(--gray-3); color: var(--white); }
+        .filter-btn.active { background: var(--white); color: #000; border-color: var(--white); }
+
+        .work-list { border-top: 1px solid var(--gray-5); }
+        .work-row {
+            display: grid; grid-template-columns: 48px 1.5fr 1.2fr 1fr 100px 40px; gap: 24px;
+            align-items: center; padding: 20px 0; border-bottom: 1px solid var(--gray-5);
+            transition: all 0.25s var(--ease); text-decoration: none; color: inherit; cursor: pointer;
+        }
+        .work-row:hover {
+            padding-left: 12px; background: linear-gradient(90deg, rgba(245,158,11,0.04), transparent);
+        }
+        .work-row:hover .work-title { color: var(--accent); }
+        .work-row:hover .work-num { color: var(--accent); }
+        .work-row:hover .work-link { opacity: 1; transform: translateX(0); }
+        .work-num {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.82rem;
+            color: var(--gray-4); transition: color 0.2s;
+        }
+        .work-title {
+            font-size: 0.98rem; font-weight: 500; color: var(--white); transition: color 0.2s;
+        }
+        .work-feat { font-weight: 300; color: var(--gray-3); font-size: 0.88rem; }
+        .work-artist { font-size: 0.9rem; color: var(--gray-2); }
+        .work-role {
+            display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+            text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+        }
+        .role-producer { background: rgba(245, 158, 11, 0.1); color: var(--accent-light); }
+        .role-engineer { background: rgba(14, 165, 233, 0.1); color: #38bdf8; }
+        .role-artist   { background: rgba(245, 158, 11, 0.1); color: var(--accent-light); }
+        .role-writer   { background: rgba(139, 92, 246, 0.1); color: #a78bfa; }
+        .role-feature  { background: rgba(34, 197, 94, 0.1); color: #4ade80; }
+        .work-year {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.82rem;
+            color: var(--gray-3); text-align: right;
+        }
+        .work-link {
+            display: flex; justify-content: flex-end; color: var(--gray-4);
+            opacity: 0; transform: translateX(-4px); transition: all 0.25s var(--ease);
+        }
+        .work-link svg { width: 14px; height: 14px; }
+        .work-row.no-link { cursor: default; }
+        .work-row.no-link:hover { padding-left: 0; background: transparent; }
+        .work-row.no-link:hover .work-title { color: var(--white); }
+        .work-row.no-link:hover .work-num { color: var(--gray-4); }
+        .work-row.no-link .work-link { opacity: 0.3; color: var(--gray-5); }
+
+        @media (max-width: 900px) {
+            .work-row { grid-template-columns: 36px 1fr 36px; gap: 16px; padding: 18px 0; min-height: 52px; }
+            .work-artist, .work-role-cell, .work-year { display: none; }
+            /* Always show the link arrow on mobile (no hover state) */
+            .work-link { opacity: 0.5; transform: none; color: var(--gray-3); }
+        }
+
+        /* PROJECTS */
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+        }
+        @media (max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
+        .project-card {
+            position: relative; background: var(--black-2); border: 1px solid var(--gray-5);
+            border-radius: 8px; overflow: hidden; transition: all 0.35s var(--ease);
+            text-decoration: none; display: block;
+        }
+        .project-card:hover {
+            border-color: var(--gray-3); transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+        }
+        .project-cover {
+            aspect-ratio: 16/10; position: relative; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            background-color: #0a0a0a;
+        }
+        .project-cover-img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            transition: transform 0.6s var(--ease);
+        }
+        .project-card:hover .project-cover-img { transform: scale(1.04); }
+        /* Darken real covers so the label/year tags stay readable */
+        .project-cover.has-art::before {
+            content: ''; position: absolute; inset: 0; z-index: 1;
+            background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.55) 100%);
+        }
+        .project-cover.c1 { background: linear-gradient(135deg, #2d1b3d 0%, #1a0f2e 50%, #0f0a1f 100%); }
+        .project-cover.c2 { background: linear-gradient(135deg, #3d1f1a 0%, #2a1410 50%, #1a0a0a 100%); }
+        .project-cover.c3 { background: linear-gradient(135deg, #132d35 0%, #0d1e24 50%, #08141a 100%); }
+        .project-cover.c4 { background: linear-gradient(135deg, #1a3524 0%, #0f2418 50%, #0a1a10 100%); }
+        .project-cover-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 700; font-style: italic;
+            color: rgba(255,255,255,0.06); position: absolute; letter-spacing: -0.03em;
+            z-index: 2;
+        }
+        .project-cover-label {
+            position: absolute; top: 20px; left: 20px;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+            color: rgba(255,255,255,0.92); letter-spacing: 0.15em; text-transform: uppercase;
+            z-index: 3;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        }
+        .project-cover-year {
+            position: absolute; top: 20px; right: 20px;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
+            color: rgba(255,255,255,0.92);
+            z-index: 3;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+        }
+        .project-body { padding: 28px 32px 32px; }
+        .project-title {
+            font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 600;
+            color: var(--white); margin-bottom: 6px;
+        }
+        .project-artist { font-size: 0.88rem; color: var(--gray-3); margin-bottom: 14px; }
+        .project-desc {
+            font-size: 0.9rem; color: var(--gray-2); line-height: 1.65; font-weight: 300; margin-bottom: 20px;
+        }
+        .project-meta {
+            display: flex; gap: 20px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid var(--gray-5);
+        }
+        .project-meta-item { font-size: 0.75rem; }
+        .project-meta-item .k {
+            font-family: 'JetBrains Mono', monospace; color: var(--gray-4);
+            text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.65rem;
+            display: block; margin-bottom: 2px;
+        }
+        .project-meta-item .v { color: var(--gray-1); font-weight: 500; }
+
+        /* LISTEN — redesigned */
+        .listen-intro {
+            display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px;
+            margin-bottom: 48px; align-items: end;
+        }
+        @media (max-width: 768px) { .listen-intro { grid-template-columns: 1fr; gap: 24px; } }
+        .listen-platforms {
+            display: flex; gap: 12px; flex-wrap: wrap;
+        }
+        .platform-pill {
+            display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px;
+            border: 1px solid var(--gray-5); border-radius: 100px; text-decoration: none;
+            font-size: 0.82rem; font-weight: 500; color: var(--gray-2);
+            transition: all 0.2s var(--ease);
+        }
+        .platform-pill:hover { border-color: var(--white); color: var(--white); transform: translateY(-1px); }
+        .platform-pill.spotify:hover { border-color: var(--spotify); color: var(--spotify); }
+        .platform-pill.apple:hover { border-color: var(--apple); color: var(--apple); }
+        .platform-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        .platform-dot.s { background: var(--spotify); }
+        .platform-dot.a { background: var(--apple); }
+
+        .listen-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+        }
+        @media (max-width: 768px) { .listen-grid { grid-template-columns: 1fr; } }
+        .listen-card {
+            background: var(--black-2); border: 1px solid var(--gray-5); border-radius: 8px; padding: 16px;
+            transition: border-color 0.2s;
+        }
+        .listen-card:hover { border-color: var(--spotify); }
+        .listen-card-label {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 12px; font-size: 0.75rem;
+        }
+        .listen-card-label .tag {
+            font-family: 'JetBrains Mono', monospace; color: var(--gray-4);
+            letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.68rem;
+        }
+        .listen-card-label .len {
+            font-family: 'JetBrains Mono', monospace; color: var(--gray-3); font-size: 0.72rem;
+        }
+        .listen-card iframe { border-radius: 6px; width: 100%; }
+        .listen-card-open {
+            display: inline-flex; align-items: center; gap: 6px;
+            margin-top: 10px; font-size: 0.72rem; color: var(--spotify);
+            text-decoration: none; font-weight: 500; letter-spacing: 0.02em;
+            transition: opacity 0.2s;
+        }
+        .listen-card-open:hover { opacity: 0.8; }
+
+        /* CREDITS / PRESS strip */
+        .credits-strip {
+            background: var(--black-2); border: 1px solid var(--gray-5); border-radius: 8px; padding: 40px;
+        }
+        @media (max-width: 640px) { .credits-strip { padding: 28px 22px; } }
+        .credits-title {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--white);
+            margin-bottom: 8px;
+        }
+        .credits-sub { font-size: 0.88rem; color: var(--gray-3); margin-bottom: 28px; }
+        .credits-list {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;
+        }
+        .credit-item {
+            padding: 20px; border: 1px solid var(--gray-5); border-radius: 6px;
+            transition: border-color 0.2s;
+            display: block; text-decoration: none; color: inherit; cursor: pointer;
+        }
+        .credit-item:hover { border-color: var(--accent); }
+        .credit-role {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--accent);
+            letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;
+        }
+        .credit-title-t { font-size: 1rem; color: var(--white); font-weight: 500; margin-bottom: 4px; }
+        .credit-artist { font-size: 0.82rem; color: var(--gray-3); }
+
+        /* MEDIA / FROM THE BOOTH — dedicated player styling */
+        .reels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            justify-items: center;
+        }
+        .reel-wrap {
+            width: 100%;
+            max-width: 440px;
+            background: linear-gradient(180deg, #141414 0%, #0f0f0f 100%);
+            border: 1px solid var(--gray-5);
+            border-radius: 14px;
+            overflow: hidden;
+            transition: border-color 0.25s var(--ease);
+            /* No translate3d / translateZ here — GPU promotion causes iOS blank patches */
+        }
+        .reel-wrap:hover {
+            border-color: var(--gray-3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .reel-wrap:hover .reel-platform-badge { opacity: 1; }
+
+        /* Player top bar */
+        .player-bar {
+            display: flex; align-items: center; gap: 12px;
+            padding: 14px 16px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #141414 100%);
+            border-bottom: 1px solid var(--gray-5);
+        }
+        .player-dots { display: flex; gap: 6px; flex-shrink: 0; }
+        .player-dots span {
+            width: 10px; height: 10px; border-radius: 50%;
+        }
+        .player-dots span:nth-child(1) { background: #ff5f57; }
+        .player-dots span:nth-child(2) { background: #febc2e; }
+        .player-dots span:nth-child(3) { background: #28c840; }
+        .player-title {
+            flex: 1;
+            font-size: 0.78rem; color: var(--gray-2); font-weight: 500;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.02em;
+        }
+        .reel-platform-badge {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em;
+            padding: 4px 9px; border-radius: 100px;
+            background: rgba(255,255,255,0.06); color: var(--gray-2);
+            text-transform: uppercase; opacity: 0.7;
+            transition: opacity 0.2s, color 0.2s, background 0.2s;
+            flex-shrink: 0;
+        }
+        .reel-wrap[data-platform="instagram"] .reel-platform-badge { color: #E1306C; }
+        .reel-wrap[data-platform="youtube"] .reel-platform-badge { color: #FF0000; }
+        .reel-wrap[data-platform="instagram"]:hover .reel-platform-badge { background: rgba(225,48,108,0.12); }
+        .reel-wrap[data-platform="youtube"]:hover .reel-platform-badge { background: rgba(255,0,0,0.12); }
+
+        /* Video area */
+        .player-video {
+            position: relative;
+            width: 100%;
+            background: #000;
+            overflow: hidden;
+        }
+        .player-video iframe {
+            display: block;
+            width: 100%;
+            border: 0;
+            background: #000;
+        }
+        /* Instagram reels are 9:16 portrait */
+        .player-video.ig-frame {
+            aspect-ratio: 9/11.5;
+            max-height: 520px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .player-video.ig-frame iframe {
+            position: absolute; inset: 0;
+            height: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            background: #000;
+        }
+        /* YouTube is 16:9 landscape */
+        .player-video.yt-frame {
+            aspect-ratio: 16/9;
+        }
+        .player-video.yt-frame iframe {
+            position: absolute; inset: 0; height: 100%;
+        }
+
+        /* Player footer (controls strip) */
+        .player-footer {
+            display: flex; align-items: center; gap: 12px;
+            padding: 12px 16px;
+            background: linear-gradient(0deg, #0f0f0f 0%, #141414 100%);
+            border-top: 1px solid var(--gray-5);
+        }
+        .player-play-btn {
+            width: 34px; height: 34px; border-radius: 50%;
+            background: var(--accent); color: #000;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; border: none; cursor: pointer;
+            transition: transform 0.15s var(--ease), background 0.15s;
+            text-decoration: none;
+        }
+        .player-play-btn:hover { background: var(--accent-light); transform: scale(1.08); }
+        .player-play-btn svg { width: 12px; height: 12px; margin-left: 2px; fill: currentColor; }
+        .player-track {
+            flex: 1;
+            height: 3px; border-radius: 3px;
+            background: var(--gray-5);
+            overflow: hidden;
+            position: relative;
+        }
+        .player-track-fill {
+            position: absolute; top: 0; left: 0; height: 100%;
+            width: 35%;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+        .player-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.66rem; color: var(--gray-3);
+            flex-shrink: 0;
+            letter-spacing: 0.04em;
+        }
+        .player-caption {
+            padding: 12px 16px 16px;
+            font-size: 0.83rem; color: var(--gray-2);
+            line-height: 1.5;
+            border-top: 1px solid var(--gray-5);
+        }
+        .player-caption strong {
+            color: var(--white); font-weight: 600;
+        }
+        .player-open-link {
+            font-size: 0.72rem; color: var(--gray-3);
+            text-decoration: none; margin-left: 4px;
+            transition: color 0.2s; flex-shrink: 0;
+        }
+        .player-open-link:hover { color: var(--white); }
+
+        /* Play overlay */
+        .play-overlay {
+            position: absolute; inset: 0; z-index: 10;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 14px;
+            background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.55) 100%);
+            cursor: pointer;
+            transition: opacity 0.3s var(--ease);
+            border: 0; padding: 0; width: 100%;
+            -webkit-appearance: none; appearance: none;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .play-overlay:hover { background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.65) 100%); }
+        .play-overlay.loaded { opacity: 0; pointer-events: none; }
+        .play-overlay-btn {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: var(--accent); color: #000;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 30px rgba(245,158,11,0.45), 0 0 0 0 rgba(245,158,11,0.5);
+            animation: pulseRing 2s ease-in-out infinite;
+            transition: transform 0.2s var(--ease);
+            border: none;
+        }
+        .reel-wrap[data-platform="youtube"] .play-overlay-btn { background: #FF0000; color: #fff; box-shadow: 0 8px 30px rgba(255,0,0,0.4), 0 0 0 0 rgba(255,0,0,0.4); }
+        .reel-wrap[data-platform="instagram"] .play-overlay-btn {
+            background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(220,39,67,0.4), 0 0 0 0 rgba(220,39,67,0.4);
+        }
+        .play-overlay:hover .play-overlay-btn { transform: scale(1.1); }
+        .play-overlay-btn svg { width: 24px; height: 24px; margin-left: 4px; fill: currentColor; }
+        @keyframes pulseRing {
+            0%   { box-shadow: 0 8px 30px rgba(245,158,11,0.45), 0 0 0 0 rgba(245,158,11,0.5); }
+            70%  { box-shadow: 0 8px 30px rgba(245,158,11,0.45), 0 0 0 18px rgba(245,158,11,0); }
+            100% { box-shadow: 0 8px 30px rgba(245,158,11,0.45), 0 0 0 0 rgba(245,158,11,0); }
+        }
+        .reel-wrap[data-platform="youtube"] .play-overlay-btn { animation-name: pulseRingYT; }
+        @keyframes pulseRingYT {
+            0%   { box-shadow: 0 8px 30px rgba(255,0,0,0.4), 0 0 0 0 rgba(255,0,0,0.5); }
+            70%  { box-shadow: 0 8px 30px rgba(255,0,0,0.4), 0 0 0 18px rgba(255,0,0,0); }
+            100% { box-shadow: 0 8px 30px rgba(255,0,0,0.4), 0 0 0 0 rgba(255,0,0,0); }
+        }
+        .reel-wrap[data-platform="instagram"] .play-overlay-btn { animation-name: pulseRingIG; }
+        @keyframes pulseRingIG {
+            0%   { box-shadow: 0 8px 30px rgba(220,39,67,0.4), 0 0 0 0 rgba(220,39,67,0.5); }
+            70%  { box-shadow: 0 8px 30px rgba(220,39,67,0.4), 0 0 0 18px rgba(220,39,67,0); }
+            100% { box-shadow: 0 8px 30px rgba(220,39,67,0.4), 0 0 0 0 rgba(220,39,67,0); }
+        }
+        .play-overlay-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem; color: rgba(255,255,255,0.85);
+            letter-spacing: 0.15em; text-transform: uppercase;
+        }
+
+        /* Thumbnails shown before video loads */
+        .thumb-grad {
+            position: absolute; inset: 0; z-index: 1;
+            display: flex; align-items: center; justify-content: center;
+            transition: opacity 0.4s var(--ease);
+        }
+        .thumb-grad.t-ig1 { background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 50%, #F77737 100%); }
+        .thumb-grad.t-ig2 { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+        .thumb-grad.t-yt  { background: linear-gradient(135deg, #1a0a0a 0%, #3a0f0f 50%, #1a0a0a 100%); }
+        /* Real YouTube thumbnail image wrapper */
+        .yt-thumb-img { position: absolute; inset: 0; z-index: 1; transition: opacity 0.4s var(--ease); }
+        /* When loaded, fade out thumbs AND let clicks pass through to the iframe controls */
+        .thumb-grad.faded, .yt-thumb-img.faded { opacity: 0; pointer-events: none; }
+        .thumb-grad-initial {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem; font-weight: 700; font-style: italic;
+            color: rgba(255,255,255,0.2);
+            letter-spacing: -0.02em;
+        }
+        @media (max-width: 480px) {
+            .play-overlay-btn { width: 56px; height: 56px; }
+            .play-overlay-btn svg { width: 20px; height: 20px; }
+            .thumb-grad-initial { font-size: 3.5rem; }
+        }
+
+        .reel-wrap blockquote { margin: 0 !important; width: 100% !important; min-width: 0 !important; }
+        .reel-wrap iframe { max-width: 100%; }
+
+        /* CONTACT */
+        .contact {
+            background: var(--black-2); border-top: 1px solid var(--gray-5); border-bottom: 1px solid var(--gray-5);
+        }
+        .contact-grid {
+            display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: start;
+        }
+        @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600;
+            line-height: 1.1; letter-spacing: -0.02em; color: var(--white); margin-bottom: 24px;
+        }
+        .contact-title em { color: var(--accent); }
+        .contact-text {
+            font-size: 1.05rem; color: var(--gray-2); line-height: 1.7; font-weight: 300;
+            margin-bottom: 36px; max-width: 480px;
+        }
+        .contact-methods { display: flex; flex-direction: column; gap: 2px; }
+        .contact-method {
+            display: flex; align-items: center; justify-content: space-between; padding: 20px 0;
+            border-bottom: 1px solid var(--gray-5); text-decoration: none; transition: all 0.2s var(--ease);
+        }
+        .contact-method:hover { padding-left: 8px; }
+        .contact-method:hover .cm-arrow { transform: translateX(6px); color: var(--accent); }
+        .contact-method:hover .cm-value { color: var(--accent); }
+        .cm-label {
+            font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--gray-4);
+            text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 4px;
+        }
+        .cm-value { font-size: 1.1rem; font-weight: 500; color: var(--white); transition: color 0.2s; }
+        .cm-arrow { color: var(--gray-4); transition: all 0.2s var(--ease); font-size: 1.2rem; }
+
+        /* Form */
+        .contact-form {
+            background: var(--black-3); border: 1px solid var(--gray-5); border-radius: 8px; padding: 36px;
+        }
+        .form-title {
+            font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600;
+            color: var(--white); margin-bottom: 6px;
+        }
+        .form-sub { font-size: 0.85rem; color: var(--gray-3); margin-bottom: 28px; }
+        .form-group { margin-bottom: 20px; }
+        .form-label {
+            display: block; font-size: 0.75rem; font-weight: 500; color: var(--gray-2);
+            text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;
+        }
+        .form-input, .form-select, .form-textarea {
+            width: 100%; background: var(--black-2); border: 1px solid var(--gray-5); border-radius: 6px;
+            padding: 12px 14px; color: var(--white); font-family: inherit; font-size: 0.92rem;
+            transition: border-color 0.2s; outline: none;
+        }
+        .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--accent); }
+        .form-input::placeholder, .form-textarea::placeholder { color: var(--gray-4); }
+        .form-textarea { min-height: 110px; resize: vertical; }
+        .form-select {
+            cursor: pointer; appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23737373' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+        }
+        .form-select option { background: var(--black-3); color: var(--white); }
+        .form-btn {
+            width: 100%; padding: 14px; background: var(--white); color: #000; border-radius: 6px;
+            font-size: 0.9rem; font-weight: 600; transition: all 0.2s var(--ease);
+        }
+        .form-btn:hover { background: var(--accent); transform: translateY(-1px); }
+        .form-success { display: none; text-align: center; padding: 30px 10px; }
+        .form-success.show { display: block; }
+        .form-success-check {
+            width: 48px; height: 48px; background: rgba(34, 197, 94, 0.15); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; color: #4ade80;
+            font-size: 1.5rem; margin: 0 auto 16px;
+        }
+        .form-success h4 {
+            font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 8px;
+        }
+        .form-success p { font-size: 0.88rem; color: var(--gray-2); }
+
+        /* FOOTER */
+        footer { padding: 60px 0 32px; }
+        .footer-top {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px;
+        }
+        @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; } }
+        .footer-brand .logo { margin-bottom: 16px; }
+        .footer-tagline {
+            font-size: 0.9rem; color: var(--gray-3); line-height: 1.6; max-width: 320px; font-weight: 300;
+        }
+        .footer-col h4 {
+            font-size: 0.72rem; font-weight: 600; color: var(--gray-3); text-transform: uppercase;
+            letter-spacing: 0.15em; margin-bottom: 20px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; }
+        .footer-col a {
+            font-size: 0.88rem; color: var(--gray-2); text-decoration: none; transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-social { display: flex; gap: 10px; flex-wrap: wrap; }
+        .social-link {
+            width: 40px; height: 40px; border-radius: 8px; border: 1px solid var(--gray-5);
+            display: flex; align-items: center; justify-content: center; color: var(--gray-2);
+            transition: all 0.2s var(--ease); text-decoration: none;
+        }
+        .social-link:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center; padding-top: 28px;
+            border-top: 1px solid var(--gray-5); flex-wrap: wrap; gap: 12px;
+        }
+        .footer-copy { font-size: 0.8rem; color: var(--gray-4); }
+        .footer-meta { display: flex; gap: 20px; font-size: 0.78rem; color: var(--gray-4); }
+        .footer-meta span { display: flex; align-items: center; gap: 6px; }
+        .pulse-dot {
+            width: 6px; height: 6px; background: var(--accent); border-radius: 50%;
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        /* REVEAL — use opacity only on mobile; transforms near iframes cause white patches */
+        .reveal {
+            opacity: 0;
+            transition: opacity 0.7s var(--ease-smooth);
+            will-change: opacity;
+        }
+        .reveal.visible { opacity: 1; }
+
+        /* Iframe containers — do NOT promote to their own GPU layer on iOS.
+           Keeping them in normal paint flow prevents the white/black tile bug. */
+        iframe {
+            display: block;
+            max-width: 100%;
+            background: #111;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--black); }
+        ::-webkit-scrollbar-thumb { background: var(--gray-5); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gray-4); }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .menu-toggle { display: flex; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-image { aspect-ratio: 16/10; }
+            /* Disable heavy grid-lines animation on mobile for smoother paint */
+            .hero-grid-lines { display: none; }
+        }
+        /* Mobile-specific fixes for scroll rendering */
+        @media (max-width: 768px) {
+            /* Disable backdrop-filter on mobile nav — #1 cause of scroll jank on iOS */
+            .nav.scrolled {
+                background: #0a0a0a !important;
+                -webkit-backdrop-filter: none !important;
+                backdrop-filter: none !important;
+            }
+            /* Pause marquee animation on mobile (uses GPU continuously) */
+            .marquee { animation: none; }
+            .marquee-item { font-size: 0.85rem; }
+            /* Disable hover transform effects that cause unnecessary paints */
+            .project-card:hover { transform: none; box-shadow: none; }
+            .reel-wrap:hover { transform: none; box-shadow: none; }
+            .service-card:hover { background: var(--black-2); }
+            .btn-dark:hover { transform: none; box-shadow: none; background: var(--accent); }
+            .btn-outline:hover { transform: none; }
+            .social-link:hover { transform: none; }
+            .back-to-top:hover { transform: none; }
+            .player-play-btn:hover { transform: none; }
+            .platform-pill:hover { transform: none; }
+            /* Reduce hero animations — no translateY on mobile to avoid iOS blank tiles */
+            .hero-grid-lines { display: none; }
+            .scroll-cue { display: none; }
+            .hero-title .line span {
+                transform: none !important;
+                -webkit-transform: none !important;
+                animation-name: fadeIn !important;
+            }
+            .hero-sub, .hero-buttons {
+                transform: none !important;
+                -webkit-transform: none !important;
+            }
+            /* Smaller Spotify embeds on mobile */
+            .listen-card iframe { height: 232px !important; }
+            /* Disable pulse animations on play buttons (save battery/CPU) */
+            .play-overlay-btn { animation: none !important; }
+            /* Reduce padding on sections so you don't have to scroll as much */
+            .section { padding-top: 60px; padding-bottom: 60px; }
+        }
+        @media (max-width: 480px) {
+            .section { padding-top: 48px; padding-bottom: 48px; }
+            .credits-list { grid-template-columns: 1fr; }
+            .services-list { grid-template-columns: 1fr; }
+        }
+        /* Respect reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+            right: calc(24px + env(safe-area-inset-right, 0px));
+            z-index: 999;
+            width: 48px; height: 48px; border-radius: 50%;
+            background: var(--accent); color: #000;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 8px 24px rgba(245,158,11,0.35);
+            opacity: 0; transform: translateY(20px) scale(0.9);
+            transition: all 0.3s var(--ease);
+            pointer-events: none;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .back-to-top.show {
+            opacity: 1; transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        .back-to-top:hover { background: var(--accent-light); transform: translateY(-2px) scale(1); }
+        .back-to-top svg { width: 20px; height: 20px; }
+
+        /* Prevent horizontal scroll */
+        @media (max-width: 480px) {
+            .container { padding: 0 clamp(16px, 5vw, 24px); }
+            .btn { padding: 14px 24px; font-size: 0.85rem; min-height: 44px; }
+            .hero-buttons .btn-ghost { display: none; }
+            .service-card { padding: 28px 22px; }
+            .contact-form { padding: 22px 20px; }
+            .credits-strip { padding: 24px 20px; }
+            .work-filters { gap: 6px; }
+            .filter-btn { padding: 8px 14px; font-size: 0.78rem; min-height: 36px; }
+            .listen-grid { grid-template-columns: 1fr; }
+            .reels-grid { grid-template-columns: 1fr; gap: 20px; }
+            .reel-wrap { max-width: 100%; border-radius: 12px; }
+            .player-video.ig-frame { aspect-ratio: 9/12; max-height: 480px; }
+            .player-bar { padding: 12px 14px; }
+            .player-title { font-size: 0.72rem; }
+            /* Disable panel slide animation on mobile to prevent iOS blank patches */
+            .listen-panel.active { animation: fadeIn 0.3s var(--ease); }
+            .footer-top { grid-template-columns: 1fr; gap: 28px; }
+            .form-input, .form-select, .form-textarea { font-size: 16px; } /* prevent iOS zoom */
+        }
+        @media (max-width: 380px) {
+            .hero-title { font-size: 2.6rem; }
+            .logo span:last-child { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#top" class="logo">
+                <span class="logo-mark">M</span>
+                <span>Mike 1ne</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#label">7H Music Group</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#listen">Listen</a></li>
+                <li><a href="#contact" class="nav-cta">Book a Session</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#label" class="mobile-link">7H Music Group</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#work" class="mobile-link">Discography &amp; Credits</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#listen" class="mobile-link">Listen</a></li>
+            <li><a href="#contact" class="mobile-link" style="color: var(--accent); font-weight:600;">Book a Session →</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+        <div class="hero-bg">
+            <div class="hero-grid-lines"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span class="dot"></span>
+                    Available for sessions — Kampala, UG &amp; Remote
+                </div>
+                <h1 class="hero-title">
+                    <span class="line"><span>Sound with</span></span>
+                    <span class="line"><span><span class="accent">intention.</span></span></span>
+                </h1>
+                <p class="hero-sub">
+                    I'm Mike 1ne — a sound engineer and music producer based in Kampala, Uganda. I make records that move crowds, from the booth to global streaming platforms. CEO of 7H Music Group.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-dark">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        See the Work
+                    </a>
+                    <a href="#listen" class="btn btn-outline">Press Play</a>
+                    <a href="https://open.spotify.com/artist/4DA5LBW4NWzVLcVSOrBLsI" target="_blank" rel="noopener" class="btn btn-ghost">
+                        Spotify ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-cue">
+            <span>Scroll</span>
+            <div class="scroll-cue-line"></div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <div class="marquee">
+            <span class="marquee-item">Afrobeats <span class="sep">✦</span> Amapiano <span class="sep">✦</span> Hip Hop <span class="sep">✦</span> R&amp;B <span class="sep">✦</span> Reggae <span class="sep">✦</span> Uga-Drill <span class="sep">✦</span> Lugaflow <span class="sep">✦</span> Mixing <span class="sep">✦</span> Mastering <span class="sep">✦</span> Vocal Production <span class="sep">✦</span> A&amp;R <span class="sep">✦</span> Executive Production <span class="sep">✦</span></span>
+            <span class="marquee-item">Afrobeats <span class="sep">✦</span> Amapiano <span class="sep">✦</span> Hip Hop <span class="sep">✦</span> R&amp;B <span class="sep">✦</span> Reggae <span class="sep">✦</span> Uga-Drill <span class="sep">✦</span> Lugaflow <span class="sep">✦</span> Mixing <span class="sep">✦</span> Mastering <span class="sep">✦</span> Vocal Production <span class="sep">✦</span> A&amp;R <span class="sep">✦</span> Executive Production <span class="sep">✦</span></span>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image reveal">
+                    <picture>
+                        <source srcset="portrait-about.webp" type="image/webp">
+                        <img src="portrait-about.jpg" alt="Mike 1ne" class="about-photo" loading="lazy" decoding="async" width="900" height="1125">
+                    </picture>
+                    <div class="about-image-inner">
+                        <div class="about-image-tag">Kampala, Uganda 🇺🇬 · CEO, 7H Music Group</div>
+                        <div class="about-image-quote">"Five years behind the scenes taught me what moves a room. Now I build records for the world."</div>
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <span class="section-num">01 — About</span>
+                    <h2 class="section-title" style="margin-bottom: 28px;">The producer who learned the room first.</h2>
+                    <p>Before I ever sold a beat or ran a vocal session, I spent five years inside Kampala's live-music ecosystem — managing dancers, booking deejays, and running small-scale events. That background shaped everything I do now. I know what a speaker stack feels like from the floor. I know which frequencies make a room lose its mind.</p>
+                    <p>Today I split my time between three lanes: engineering and producing records for a growing roster of Ugandan talent, helming producer-led singles and collaborative projects (most recently the <em>Love Look What You Made Me Do</em> EP with Kai &amp; River), and running <strong style="color:var(--white);">7H Music Group</strong> — an independent label and creative company handling A&amp;R, executive production, and release rollouts for artists ready to be heard beyond the 256.</p>
+                    <p>I work primarily in Afrobeats, Hip Hop, R&amp;B, Amapiano, and Reggae. I believe records should feel inevitable — like they couldn't have been made any other way.</p>
+
+                    <div class="about-meta">
+                        <div class="about-meta-item">
+                            <div class="about-meta-label">Artist / Producer</div>
+                            <div class="about-meta-value">Mike 1ne</div>
+                        </div>
+                        <div class="about-meta-item">
+                            <div class="about-meta-label">Based In</div>
+                            <div class="about-meta-value">Kampala, Uganda</div>
+                        </div>
+                        <div class="about-meta-item">
+                            <div class="about-meta-label">Founder / CEO</div>
+                            <div class="about-meta-value">7H Music Group</div>
+                        </div>
+                        <div class="about-meta-item">
+                            <div class="about-meta-label">Active Since</div>
+                            <div class="about-meta-value">2020 (production)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7H MUSIC GROUP — Executive Operations Block -->
+    <section class="section" id="label" style="padding-top:0; padding-bottom:0;">
+        <div class="container">
+            <div class="exec-block reveal">
+                <div>
+                    <span class="exec-tag">Executive Operations</span>
+                    <h2 class="exec-title">7H Music Group — <em>built for artists who want a career.</em></h2>
+                    <p class="exec-desc">
+                        Beyond the booth, 7H Music Group is an independent label and creative company I founded to give Kampala's most serious artists the infrastructure that major labels reserve for their priority acts — A&amp;R, intentional project rollouts, and premium feature brokering, all under one roof.
+                    </p>
+                    <div class="exec-pillars">
+                        <div class="exec-pillar">
+                            <div class="exec-pillar-icon">A&amp;R</div>
+                            <div>
+                                <div class="exec-pillar-label">A&amp;R Pipeline</div>
+                                <div class="exec-pillar-sub">Talent identification, sonic identity, and long-term artist development.</div>
+                            </div>
+                        </div>
+                        <div class="exec-pillar">
+                            <div class="exec-pillar-icon">◈</div>
+                            <div>
+                                <div class="exec-pillar-label">Project Rollouts</div>
+                                <div class="exec-pillar-sub">Intentional, calendar-driven release strategy for singles, EPs, and albums.</div>
+                            </div>
+                        </div>
+                        <div class="exec-pillar">
+                            <div class="exec-pillar-icon">⇌</div>
+                            <div>
+                                <div class="exec-pillar-label">Feature Brokering</div>
+                                <div class="exec-pillar-sub">Premium cross-camp collaborations with vetted Ugandan and regional talent.</div>
+                            </div>
+                        </div>
+                        <div class="exec-pillar">
+                            <div class="exec-pillar-icon">✓</div>
+                            <div>
+                                <div class="exec-pillar-label">Quality Control</div>
+                                <div class="exec-pillar-sub">End-to-end executive production — from first beat to mastered delivery.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="exec-cta">
+                        Pitching a project to 7H?
+                        <span>→</span>
+                    </a>
+                </div>
+                <div class="exec-visual">
+                    <div class="exec-visual-num">Est. 2022 · Kampala, UG</div>
+                    <div class="exec-visual-mark">7H<br><span>Music Group</span></div>
+                    <div class="exec-visual-sub">Independent Label &amp; Creative Co.</div>
+                    <div class="exec-visual-stats">
+                        <div class="exec-stat"><span class="exec-stat-label">Releases Engineered</span><span class="exec-stat-val">12+</span></div>
+                        <div class="exec-stat"><span class="exec-stat-label">Roster Acts</span><span class="exec-stat-val">Active</span></div>
+                        <div class="exec-stat"><span class="exec-stat-label">Services</span><span class="exec-stat-val">A&amp;R · Exec · Eng.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" style="background: var(--black-2);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">02 — Services</span>
+                <h2 class="section-title">What I can do for your record.</h2>
+                <p class="section-desc">End-to-end music production — from the first idea to a finished master. Every record is tailored to the artist, never a template.</p>
+            </div>
+            <div class="services-list reveal">
+                <a href="#contact" class="service-card" data-service="production">
+                    <span class="service-num">/ 01</span>
+                    <span class="service-icon">◐</span>
+                    <h3 class="service-name">Music Production <span class="service-arrow">↗</span></h3>
+                    <p class="service-desc">Original beat composition, full arrangement, and instrumentation across Afrobeats, Amapiano, Hip Hop, R&amp;B, and Reggae — built from the ground up around your voice and vision.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Beat Making</span>
+                        <span class="service-tag">Arrangement</span>
+                        <span class="service-tag">Sound Design</span>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card" data-service="mixing">
+                    <span class="service-num">/ 02</span>
+                    <span class="service-icon">◑</span>
+                    <h3 class="service-name">Mixing &amp; Mastering <span class="service-arrow">↗</span></h3>
+                    <p class="service-desc">Pristine, streaming-ready mixes and loud, translatable masters that hold up on club systems, car speakers, radio, and earbuds. Delivered to platform spec every time.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Stem Mixing</span>
+                        <span class="service-tag">Mastering</span>
+                        <span class="service-tag">Stems Delivery</span>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card" data-service="vocals">
+                    <span class="service-num">/ 03</span>
+                    <span class="service-icon">◒</span>
+                    <h3 class="service-name">Vocal Production <span class="service-arrow">↗</span></h3>
+                    <p class="service-desc">Booth direction, comping, tuning, timing alignment, and creative vocal processing. From first take to the vocal that makes the record — I don't stop until the performance feels right.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Tracking</span>
+                        <span class="service-tag">Comping</span>
+                        <span class="service-tag">Pitch &amp; Time</span>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card" data-service="artist-dev">
+                    <span class="service-num">/ 04</span>
+                    <span class="service-icon">◓</span>
+                    <h3 class="service-name">Artist Development <span class="service-arrow">↗</span></h3>
+                    <p class="service-desc">A&amp;R, sonic identity, feature coordination, branding, and long-term career strategy through 7H Music Group. For artists who want a career, not just a single.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">A&amp;R</span>
+                        <span class="service-tag">Branding</span>
+                        <span class="service-tag">Strategy</span>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card" data-service="post">
+                    <span class="service-num">/ 05</span>
+                    <span class="service-icon">◔</span>
+                    <h3 class="service-name">Post-Production Audio <span class="service-arrow">↗</span></h3>
+                    <p class="service-desc">Audio-for-picture, podcast editing, video mix optimization, and broadcast delivery. Clean, balanced, and ready for YouTube, TV, and streaming platforms.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Audio-for-Picture</span>
+                        <span class="service-tag">Podcast</span>
+                        <span class="service-tag">Broadcast</span>
+                    </div>
+                </a>
+                <a href="#contact" class="service-card" data-service="exec">
+                    <span class="service-num">/ 06</span>
+                    <span class="service-icon">◕</span>
+                    <h3 class="service-name">Executive Production <span class="service-arrow">↗</span></h3>
+                    <p class="service-desc">End-to-end project leadership for EPs and albums — creative direction, feature brokering, quality control from first beat to final master, and release-strategy input.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Project Lead</span>
+                        <span class="service-tag">Features</span>
+                        <span class="service-tag">Quality Control</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK / DISCOGRAPHY -->
+    <section class="section" id="work">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">03 — Selected Work</span>
+                <h2 class="section-title">Discography &amp; credits.</h2>
+                <p class="section-desc">Verified production, engineering, producer-cut, and co-writer credits. Click a row to open it on Spotify or Apple Music.</p>
+            </div>
+            <div class="work-filters reveal" id="workFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="producer">Production</button>
+                <button class="filter-btn" data-filter="engineer">Engineering</button>
+                <button class="filter-btn" data-filter="artist">Producer Cuts</button>
+                <button class="filter-btn" data-filter="writer">Co-Writes</button>
+                <button class="filter-btn" data-filter="feature">Featured On</button>
+            </div>
+            <div class="work-list reveal" id="workList"></div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" style="background: var(--black-2);">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">04 — Flagship Projects</span>
+                <h2 class="section-title">Records I'm proud of.</h2>
+                <p class="section-desc">Standout producer releases and collaborations from the catalogue.</p>
+            </div>
+            <div class="projects-grid">
+                <a href="https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd" target="_blank" rel="noopener" class="project-card reveal">
+                    <div class="project-cover c1 has-art">
+                        <picture>
+                            <source srcset="cover-llwymmd.webp" type="image/webp">
+                            <img src="cover-llwymmd.jpg" alt="Love Look What You Made Me Do — EP cover" class="project-cover-img" loading="lazy" decoding="async" width="800" height="800">
+                        </picture>
+                        <span class="project-cover-label">Producer EP</span>
+                        <span class="project-cover-year">2025</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-title">Love Look What You Made Me Do</div>
+                        <div class="project-artist">Mike 1ne with Kai &amp; River</div>
+                        <div class="project-desc">A five-track Afro-R&amp;B producer EP built around duo Kai &amp; River — textures, haunted melodies, and atmospheric soundscapes crafted over late nights in the booth.</div>
+                        <div class="project-meta">
+                            <div class="project-meta-item"><span class="k">Role</span><span class="v">Producer</span></div>
+                            <div class="project-meta-item"><span class="k">Tracks</span><span class="v">5 songs</span></div>
+                            <div class="project-meta-item"><span class="k">Released</span><span class="v">Oct 27, 2025</span></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/album/70bRxZOS19STmxNCiQYtu0" target="_blank" rel="noopener" class="project-card reveal">
+                    <div class="project-cover c3 has-art">
+                        <picture>
+                            <source srcset="cover-ddna.webp" type="image/webp">
+                            <img src="cover-ddna.jpg" alt="Dance Di Night Away — Mike 1ne" class="project-cover-img" loading="lazy" decoding="async" width="800" height="800">
+                        </picture>
+                        <span class="project-cover-label">Producer Single</span>
+                        <span class="project-cover-year">2025</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-title">Dance Di Night Away</div>
+                        <div class="project-artist">Mike 1ne</div>
+                        <div class="project-desc">A lean, infectious Afrobeats producer cut — ninety-five seconds of pure groove. A study in how little you actually need to make a room move.</div>
+                        <div class="project-meta">
+                            <div class="project-meta-item"><span class="k">Role</span><span class="v">Producer</span></div>
+                            <div class="project-meta-item"><span class="k">Length</span><span class="v">1:35</span></div>
+                            <div class="project-meta-item"><span class="k">Released</span><span class="v">Sep 26, 2025</span></div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://open.spotify.com/track/4GDB9tMylfRQavVoI6UOkq" target="_blank" rel="noopener" class="project-card reveal">
+                    <div class="project-cover c2 has-art">
+                        <picture>
+                            <source srcset="cover-different-patterns.webp" type="image/webp">
+                            <img src="cover-different-patterns.jpg" alt="Different Patterns EP — Tungi (Siteesa)" class="project-cover-img" loading="lazy" decoding="async" width="800" height="800">
+                        </picture>
+                        <span class="project-cover-label">Featured Appearance</span>
+                        <span class="project-cover-year">2026</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-title">Siteesa</div>
+                        <div class="project-artist">Tungi · Different Patterns EP (VTCN Records)</div>
+                        <div class="project-desc">Featured producer appearance on Tungi's <em>Different Patterns</em> EP — a cross-pollination between the VTCN Records camp and the 7H sound.</div>
+                        <div class="project-meta">
+                            <div class="project-meta-item"><span class="k">Role</span><span class="v">Featured / Producer</span></div>
+                            <div class="project-meta-item"><span class="k">Length</span><span class="v">2:40</span></div>
+                            <div class="project-meta-item"><span class="k">Released</span><span class="v">May 8, 2026</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTEN — redesigned, accurate -->
+    <section class="section" id="listen">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">05 — Listen</span>
+                <h2 class="section-title">Press play.</h2>
+            </div>
+
+            <div class="listen-intro reveal">
+                <p class="section-desc" style="margin-bottom:0;">
+                    Selected producer cuts and collaborations streaming now. Follow the artist profile on Spotify to get new releases the day they drop.
+                </p>
+                <div class="listen-platforms">
+                    <a href="https://open.spotify.com/artist/4DA5LBW4NWzVLcVSOrBLsI" target="_blank" rel="noopener" class="platform-pill spotify">
+                        <span class="platform-dot s"></span> Spotify
+                    </a>
+                    <a href="https://music.apple.com/search?term=mike%201ne" target="_blank" rel="noopener" class="platform-pill apple">
+                        <span class="platform-dot a"></span> Apple Music
+                    </a>
+                    <a href="https://www.instagram.com/mike.1ne_/" target="_blank" rel="noopener" class="platform-pill">
+                        <span class="platform-dot" style="background:#E1306C;"></span> Instagram
+                    </a>
+                    <a href="https://www.youtube.com/results?search_query=Mike+1ne+producer+Uganda" target="_blank" rel="noopener" class="platform-pill">
+                        <span class="platform-dot" style="background:#FF0000;"></span> YouTube
+                    </a>
+                </div>
+                <p class="section-desc" style="margin-top:16px; max-width:100%; font-size:0.92rem;">
+                    Streaming everywhere as <strong style="color:var(--white);">Mike 1ne</strong> — Apple Music, YouTube Music, Boomplay, Tidal, Deezer, Amazon Music and more. Studio clips and behind-the-scenes on <a href="https://www.instagram.com/mike.1ne_/" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none;">@mike.1ne_</a>.
+                </p>
+            </div>
+
+            <!-- Genre filter tabs — lets A&Rs/supervisors audit skill in one genre quickly -->
+            <div class="listen-tabs reveal" role="tablist" aria-label="Filter by genre">
+                <button class="listen-tab active" role="tab" aria-selected="true" data-panel="afrobeats">Afrobeats &amp; Amapiano</button>
+                <button class="listen-tab" role="tab" aria-selected="false" data-panel="drill">Uga-Drill &amp; Hip Hop</button>
+                <button class="listen-tab" role="tab" aria-selected="false" data-panel="engineering">Engineering / Vocals</button>
+                <button class="listen-tab" role="tab" aria-selected="false" data-panel="all">All &amp; Profile</button>
+            </div>
+
+            <!-- Panel: Afrobeats & Amapiano -->
+            <div class="listen-panel active" id="panel-afrobeats" role="tabpanel">
+                <div class="listen-grid">
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Producer EP · Afrobeats / Afro-R&amp;B · 5 tracks</span>
+                            <span class="len">13:48</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/album/0TrL2jfJpf0FoBoVViirzd?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Love Look What You Made Me Do EP"></iframe>
+                        <a href="https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Open on Spotify ↗</a>
+                    </div>
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Producer Single · Afrobeats</span>
+                            <span class="len">1:35</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/track/3f3c0gzOcFO4MIOXhxuiTc?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Dance Di Night Away"></iframe>
+                        <a href="https://open.spotify.com/track/3f3c0gzOcFO4MIOXhxuiTc?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Open on Spotify ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Uga-Drill & Hip Hop -->
+            <div class="listen-panel" id="panel-drill" role="tabpanel">
+                <div class="listen-grid">
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Featured / Producer · Uga-Drill</span>
+                            <span class="len">2:40</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/track/4GDB9tMylfRQavVoI6UOkq?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Siteesa (Tungi ft. Mike 1ne)"></iframe>
+                        <a href="https://open.spotify.com/track/4GDB9tMylfRQavVoI6UOkq?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Open on Spotify ↗</a>
+                    </div>
+                    <div class="listen-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:428px;text-align:center;padding:40px 32px;">
+                        <div style="width:72px;height:72px;border-radius:50%;background:#FF0000;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </div>
+                        <div class="listen-card-label" style="margin-bottom:14px;">
+                            <span class="tag">Hip Hop / Cypher · Engineer + Featured</span>
+                            <span class="len">2:34</span>
+                        </div>
+                        <h4 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);margin-bottom:8px;font-weight:600;">Gas Station Freestyle</h4>
+                        <p style="font-size:0.88rem;color:var(--gray-2);line-height:1.6;margin-bottom:22px;font-weight:300;">
+                            THE TriBE WRLD ft. Tungi, Alvin Aijuka, Kerari K, Freezy F &amp; Mike 1ne. Engineered and mixed the full cypher session.
+                        </p>
+                        <a href="https://youtu.be/qrAqE_f11Uw?autoplay=1" target="_blank" rel="noopener noreferrer" class="listen-extlink yt">
+                            <svg width="16" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            Watch on YouTube ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Engineering / Vocals -->
+            <div class="listen-panel" id="panel-engineering" role="tabpanel">
+                <div class="listen-grid">
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Audio Engineer · Baranga ft. Tungi</span>
+                            <span class="len">2026</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/track/54jxyHj4o2hL8WKmkV7WIL?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="PARADISE (Baranga ft. Tungi) — engineered by Mike 1ne"></iframe>
+                        <a href="https://open.spotify.com/track/54jxyHj4o2hL8WKmkV7WIL?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Open on Spotify ↗</a>
+                    </div>
+                    <div class="listen-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:428px;text-align:center;padding:40px 32px;">
+                        <div style="width:72px;height:72px;border-radius:50%;background:var(--apple);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-weight:700;font-family:'Playfair Display',serif;font-size:1.6rem;">
+                            ♫
+                        </div>
+                        <div class="listen-card-label" style="margin-bottom:14px;">
+                            <span class="tag">Vocal Engineer · Pajen &amp; ST4NDO ft. CXJ Powell</span>
+                            <span class="len">2025</span>
+                        </div>
+                        <h4 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--white);margin-bottom:8px;font-weight:600;">Whine</h4>
+                        <p style="font-size:0.88rem;color:var(--gray-2);line-height:1.6;margin-bottom:22px;font-weight:300;">
+                            Full vocal tracking, comping, tuning and mix for Pajen &amp; ST4NDO (Rilla Inc) featuring CXJ Powell. A clean, radio-ready vocal performance.
+                        </p>
+                        <a href="https://music.apple.com/us/song/whine-feat-cxj-powell/1849080952" target="_blank" rel="noopener noreferrer" class="listen-extlink apple-link" style="border-color:var(--gray-5);color:var(--gray-1);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a4.936 4.936 0 0 0-.347-.465c-.833-.95-1.99-1.322-3.107-1.485-1.11-.162-2.23-.166-3.348-.22a77.718 77.718 0 0 0-2.233-.066c-.376 0-.75.04-1.127.055v12.746c-.02.88-.296 1.74-.893 2.41-.687.78-1.697 1.178-2.71 1.12-.97-.055-1.833-.57-2.363-1.36-.54-.78-.71-1.79-.47-2.71.25-.94.92-1.7 1.82-2.1.63-.28 1.3-.35 1.96-.26.27.04.53.11.8.2V8.73c-.82-.15-1.66-.13-2.48.04-1.66.34-3.13 1.36-3.98 2.8-.87 1.45-1.03 3.22-.44 4.8.58 1.58 1.83 2.8 3.44 3.34 1.6.54 3.4.35 4.8-.52 1.35-.85 2.23-2.33 2.35-3.94V8.18c1.05.25 2.1.58 3.18.55 1.04-.02 2.03-.45 2.73-1.2.14-.15.25-.32.35-.5l.04-.08c.06-.11.09-.24.06-.36-.03-.15-.05-.3-.04-.46z"/></svg>
+                            Open on Apple Music ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: All & Profile -->
+            <div class="listen-panel" id="panel-all" role="tabpanel">
+                <div class="listen-grid">
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Producer EP · 5 tracks</span>
+                            <span class="len">13:48</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/album/0TrL2jfJpf0FoBoVViirzd?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Love Look What You Made Me Do EP"></iframe>
+                        <a href="https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Open on Spotify ↗</a>
+                    </div>
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Producer Single · Afrobeats</span>
+                            <span class="len">1:35</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/track/3f3c0gzOcFO4MIOXhxuiTc?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Dance Di Night Away"></iframe>
+                        <a href="https://open.spotify.com/track/3f3c0gzOcFO4MIOXhxuiTc?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Open on Spotify ↗</a>
+                    </div>
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Featured on · Tungi</span>
+                            <span class="len">2:40</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/track/4GDB9tMylfRQavVoI6UOkq?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Siteesa (Tungi ft. Mike 1ne)"></iframe>
+                        <a href="https://open.spotify.com/track/4GDB9tMylfRQavVoI6UOkq?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Open on Spotify ↗</a>
+                    </div>
+                    <div class="listen-card">
+                        <div class="listen-card-label">
+                            <span class="tag">Artist Profile · Follow</span>
+                            <span class="len">Updated</span>
+                        </div>
+                        <iframe style="border-radius:6px" src="https://open.spotify.com/embed/artist/4DA5LBW4NWzVLcVSOrBLsI?utm_source=portfolio&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Mike 1ne on Spotify"></iframe>
+                        <a href="https://open.spotify.com/artist/4DA5LBW4NWzVLcVSOrBLsI?go=1" target="_blank" rel="noopener noreferrer" class="listen-card-open">Follow on Spotify ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A/B BEFORE/AFTER PROCESSING DEMO -->
+            <div class="ab-section reveal" id="ab-demo">
+                <div class="ab-header">
+                    <div class="ab-tag">The Proof · A/B Processing</div>
+                    <h3 class="ab-title">Raw booth → mastered record.</h3>
+                    <p class="ab-sub">
+                        Click play and toggle between the unprocessed booth take and the final mastered version to hear the difference a proper mix chain makes.
+                    </p>
+                </div>
+                <div class="ab-player" id="abPlayer">
+                    <div class="ab-waveform" id="abWaveform" aria-hidden="true">
+                        <!-- 48 bars rendered via JS on load -->
+                    </div>
+                    <div class="ab-controls">
+                        <button class="ab-play-btn" id="abPlayBtn" type="button" aria-label="Play/Pause">
+                            <svg id="abPlayIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                        </button>
+                        <div class="ab-toggle-group" role="group" aria-label="A/B toggle">
+                            <button class="ab-toggle raw active" type="button" data-mode="raw" aria-pressed="true">Raw Booth Take</button>
+                            <button class="ab-toggle final" type="button" data-mode="final" aria-pressed="false">Final Mastered</button>
+                        </div>
+                        <div class="ab-meta" id="abMeta">Loading demo clips…</div>
+                    </div>
+                    <div class="ab-status">
+                        <span class="ab-status-icon">ℹ</span>
+                        <span id="abStatusText"><strong>A/B demo clips coming soon.</strong> Send me a short vocal stem you'd like to hear processed, or I'll upload a real before/after from a recent session in the next update. The toggle and player are fully wired — clips swap instantly when loaded.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal" style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+                <a href="epk-mike1ne.pdf" download target="_blank" rel="noopener" class="epk-download">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Press Kit / EPK (PDF)
+                </a>
+                <span class="listen-note" style="margin:0;">One-page bio for labels, A&amp;Rs, and music supervisors.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SELECTED CREDITS + REELS -->
+    <section class="section" id="credits" style="background: var(--black-2);">
+        <div class="container">
+            <div class="credits-strip reveal">
+                <div class="section-num" style="margin-bottom:12px;">06 — In The Room</div>
+                <h3 class="credits-title">Verified credits &amp; co-signs.</h3>
+                <p class="credits-sub">Tracks I've produced, engineered, co-written, or appeared on — plus words from artists in-session.</p>
+                <div class="credits-list">
+                    <a href="https://music.apple.com/ug/artist/baranga/1764683984" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Co-Writer</div>
+                        <div class="credit-title-t">Kampala (ft. Deejay KLVN)</div>
+                        <div class="credit-artist">Baranga · Chapters I Never Wrote</div>
+                    </a>
+                    <a href="https://open.spotify.com/track/54jxyHj4o2hL8WKmkV7WIL" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Audio Engineer</div>
+                        <div class="credit-title-t">PARADISE (ft. Tungi)</div>
+                        <div class="credit-artist">Baranga · Chapters I Never Wrote</div>
+                    </a>
+                    <a href="https://music.apple.com/us/song/whine-feat-cxj-powell/1849080952" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Vocal Engineer</div>
+                        <div class="credit-title-t">Whine (ft. CXJ Powell)</div>
+                        <div class="credit-artist">Pajen &amp; ST4NDO · Rilla Inc</div>
+                    </a>
+                    <a href="https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Producer</div>
+                        <div class="credit-title-t">Love Look What You Made Me Do</div>
+                        <div class="credit-artist">Mike 1ne with Kai &amp; River · EP</div>
+                    </a>
+                    <a href="https://open.spotify.com/track/4GDB9tMylfRQavVoI6UOkq" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Featured / Producer</div>
+                        <div class="credit-title-t">Siteesa</div>
+                        <div class="credit-artist">Tungi · Different Patterns (VTCN)</div>
+                    </a>
+                    <a href="https://open.spotify.com/track/7uSihuL3FIMY5E6knxHG20" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Featured / Producer</div>
+                        <div class="credit-title-t">Until the Morning (ft. Joka &amp; Mike 1ne)</div>
+                        <div class="credit-artist">Tungi · Free Time EP (VTCN)</div>
+                    </a>
+                    <a href="https://open.spotify.com/track/3f3c0gzOcFO4MIOXhxuiTc" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Producer Single</div>
+                        <div class="credit-title-t">Dance Di Night Away</div>
+                        <div class="credit-artist">Mike 1ne · 2025</div>
+                    </a>
+                    <a href="https://youtu.be/qrAqE_f11Uw" target="_blank" rel="noopener noreferrer" class="credit-item">
+                        <div class="credit-role">Audio Engineer / Featured</div>
+                        <div class="credit-title-t">Gas Station Freestyle</div>
+                        <div class="credit-artist">THE TriBE WRLD · ft. Tungi, Freezy F &amp; more</div>
+                    </a>
+                </div>
+
+                <div style="margin-top:40px;">
+                    <h4 style="font-family:'Playfair Display',serif; font-size:1.2rem; color:var(--white); margin-bottom:6px;">From the booth.</h4>
+                    <p style="color:var(--gray-3); font-size:0.88rem; margin-bottom:24px; max-width:540px;">
+                        In-studio clips and co-signs posted by collaborators.
+                    </p>
+                    <div class="reels-grid">
+                        <!-- Tungi studio co-sign (Instagram) -->
+                        <div class="reel-wrap reveal" data-platform="instagram">
+                            <div class="player-bar">
+                                <div class="player-dots"><span></span><span></span><span></span></div>
+                                <div class="player-title">Tungi · Studio Session</div>
+                                <a href="https://www.instagram.com/reel/DSHEE-wDOGt/" target="_blank" rel="noopener noreferrer" class="reel-platform-badge" style="text-decoration:none;">
+                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                    Reel ↗
+                                </a>
+                            </div>
+                            <div class="player-video ig-frame">
+                                <div class="thumb-grad t-ig1"><span class="thumb-grad-initial">T</span></div>
+                                <button class="play-overlay" type="button" data-src="https://www.instagram.com/reel/DSHEE-wDOGt/embed/" data-type="instagram" aria-label="Load Instagram reel">
+                                    <span class="play-overlay-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                                    <span class="play-overlay-label">Tap to load reel</span>
+                                </button>
+                            </div>
+                            <div class="player-footer">
+                                <a href="https://www.instagram.com/reel/DSHEE-wDOGt/" target="_blank" rel="noopener noreferrer" class="player-play-btn" style="text-decoration:none;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;" aria-label="Open on Instagram" title="Open on Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:0;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                </a>
+                                <div class="player-track"><div class="player-track-fill"></div></div>
+                                <a href="https://www.instagram.com/reel/DSHEE-wDOGt/" target="_blank" rel="noopener noreferrer" class="player-open-link">Open ↗</a>
+                            </div>
+                            <div class="player-caption">
+                                <strong>Tungi</strong> on working with Mike 1ne in the booth.
+                            </div>
+                        </div>
+
+                        <!-- Gas Station Instagram -->
+                        <div class="reel-wrap reveal" data-platform="instagram">
+                            <div class="player-bar">
+                                <div class="player-dots"><span></span><span></span><span></span></div>
+                                <div class="player-title">THE TriBE WRLD · Gas Station Freestyle</div>
+                                <a href="https://www.instagram.com/reel/DQ66jMXDIWM/" target="_blank" rel="noopener noreferrer" class="reel-platform-badge" style="text-decoration:none;">
+                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                    Reel ↗
+                                </a>
+                            </div>
+                            <div class="player-video ig-frame">
+                                <div class="thumb-grad t-ig2"><span class="thumb-grad-initial">GS</span></div>
+                                <button class="play-overlay" type="button" data-src="https://www.instagram.com/reel/DQ66jMXDIWM/embed/" data-type="instagram" aria-label="Load Instagram reel">
+                                    <span class="play-overlay-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                                    <span class="play-overlay-label">Tap to load reel</span>
+                                </button>
+                            </div>
+                            <div class="player-footer">
+                                <a href="https://www.instagram.com/reel/DQ66jMXDIWM/" target="_blank" rel="noopener noreferrer" class="player-play-btn" style="text-decoration:none;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;" aria-label="Open on Instagram" title="Open on Instagram">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:0;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                </a>
+                                <div class="player-track"><div class="player-track-fill" style="width:55%;"></div></div>
+                                <a href="https://www.instagram.com/reel/DQ66jMXDIWM/" target="_blank" rel="noopener noreferrer" class="player-open-link">Open ↗</a>
+                            </div>
+                            <div class="player-caption">
+                                <strong>Gas Station Freestyle</strong> — THE TriBE WRLD ft. Tungi, Alvin Aijuka, Kerari K, Freezy F &amp; Mike 1ne.
+                            </div>
+                        </div>
+
+                        <!-- Gas Station YouTube -->
+                        <div class="reel-wrap reveal" data-platform="youtube">
+                            <div class="player-bar">
+                                <div class="player-dots"><span></span><span></span><span></span></div>
+                                <div class="player-title">THE TriBE WRLD · Gas Station Freestyle</div>
+                                <a href="https://youtu.be/qrAqE_f11Uw" target="_blank" rel="noopener noreferrer" class="reel-platform-badge" style="text-decoration:none;">
+                                    <svg width="12" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                    YouTube ↗
+                                </a>
+                            </div>
+                            <div class="player-video yt-frame" id="yt-video-wrap">
+                                <!-- Real YouTube thumbnail (bundled locally for GitHub/offline) with clickable play overlay -->
+                                <picture class="yt-thumb-img">
+                                    <source srcset="thumb-gas-station.webp" type="image/webp">
+                                    <img src="thumb-gas-station.jpg" alt="Gas Station Freestyle video thumbnail" loading="lazy" decoding="async" width="480" height="360" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;">
+                                </picture>
+                                <button class="play-overlay" type="button" data-src="https://www.youtube.com/embed/qrAqE_f11Uw?rel=0&amp;autoplay=1&amp;mute=1&amp;playsinline=1&amp;enablejsapi=1" data-type="youtube" aria-label="Play YouTube video">
+                                    <span class="play-overlay-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                                    <span class="play-overlay-label">Tap to play</span>
+                                </button>
+                            </div>
+                            <div class="player-footer">
+                                <a href="https://youtu.be/qrAqE_f11Uw" target="_blank" rel="noopener noreferrer" class="player-play-btn" aria-label="Open on YouTube" title="Open on YouTube" style="background:#FF0000;color:#fff;">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" style="margin-left:0;"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                </a>
+                                <div class="player-track"><div class="player-track-fill" style="width:0%;background:#FF0000;" id="ytTrackFill"></div></div>
+                                <a href="https://youtu.be/qrAqE_f11Uw" target="_blank" rel="noopener noreferrer" class="player-open-link">Open ↗</a>
+                            </div>
+                            <div class="player-caption">
+                                <strong>Gas Station Freestyle</strong> — THE TriBE WRLD ft. Tungi, Alvin Aijuka, Kerari K, Freezy F &amp; Mike 1ne.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="reveal">
+                    <span class="section-num">07 — Contact</span>
+                    <h2 class="contact-title">Let's make your<br>next <em>record.</em></h2>
+                    <p class="contact-text">Booking inquiries, production requests, feature brokering, and label submissions. Tell me about your project — I respond within 48 hours.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:mikeonerecords@gmail.com?subject=Project%20Inquiry" class="contact-method">
+                            <div>
+                                <div class="cm-label">Email — Bookings</div>
+                                <div class="cm-value">mikeonerecords@gmail.com</div>
+                            </div>
+                            <span class="cm-arrow">→</span>
+                        </a>
+                        <a href="https://open.spotify.com/artist/4DA5LBW4NWzVLcVSOrBLsI" target="_blank" rel="noopener" class="contact-method">
+                            <div>
+                                <div class="cm-label">Spotify — Artist Profile</div>
+                                <div class="cm-value">@mike1ne</div>
+                            </div>
+                            <span class="cm-arrow">↗</span>
+                        </a>
+                        <a href="https://www.instagram.com/mike.1ne_/" target="_blank" rel="noopener" class="contact-method">
+                            <div>
+                                <div class="cm-label">Instagram</div>
+                                <div class="cm-value">@mike.1ne_</div>
+                            </div>
+                            <span class="cm-arrow">↗</span>
+                        </a>
+                        <div class="contact-method" style="cursor:default;">
+                            <div>
+                                <div class="cm-label">Based In</div>
+                                <div class="cm-value">Kampala, Uganda 🇺🇬 · Remote worldwide</div>
+                            </div>
+                            <span class="cm-arrow">●</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form reveal" id="contactForm">
+                    <div id="formContent">
+                        <h3 class="form-title">Start a project</h3>
+                        <p class="form-sub">Fill in a few details and I'll get back to you.</p>
+                        <form id="bookingForm" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Name</label>
+                                <input class="form-input" type="text" id="name" name="name" placeholder="Your name / artist name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-input" type="email" id="email" name="email" placeholder="you@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="service">Service</label>
+                                <select class="form-select" id="service" name="service" required>
+                                    <option value="" disabled selected>Select what you need</option>
+                                    <option value="production">Music Production / Beats</option>
+                                    <option value="mixing">Mixing &amp; Mastering</option>
+                                    <option value="vocals">Vocal Tracking / Production</option>
+                                    <option value="artist-dev">Artist Development / Label</option>
+                                    <option value="post">Post-Production Audio</option>
+                                    <option value="exec">Executive Production</option>
+                                    <option value="other">Something else</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="assets">Assets status</label>
+                                <select class="form-select" id="assets" name="assets" required>
+                                    <option value="" disabled selected>What stage is your project at?</option>
+                                    <option value="from-scratch">I need original instrumentals from scratch</option>
+                                    <option value="raw-vocals">I have raw vocal stems recorded</option>
+                                    <option value="mix-master">I need mixing &amp; mastering only</option>
+                                    <option value="full-ep">I'm planning a full EP / album rollout</option>
+                                    <option value="not-sure">Not sure yet — guide me</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="timeline">Target schedule</label>
+                                <select class="form-select" id="timeline" name="timeline" required>
+                                    <option value="" disabled selected>When do you need it?</option>
+                                    <option value="immediate">Immediate execution / within 2 weeks</option>
+                                    <option value="30days">Within 30 days</option>
+                                    <option value="flexible">Flexible project roadmap</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="message">Project details</label>
+                                <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project, references, budget range, or anything else I should know…" required></textarea>
+                            </div>
+                            <button type="submit" class="form-btn">Send Message →</button>
+                        </form>
+                    </div>
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success-check">✓</div>
+                        <h4>Message ready.</h4>
+                        <p>Your default mail app should open with your message pre-filled. If it doesn't, email me directly at:</p>
+                        <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin:18px auto 0;flex-wrap:wrap;">
+                            <a href="mailto:mikeonerecords@gmail.com" id="successEmail" style="color:var(--accent);font-weight:600;text-decoration:none;font-size:0.95rem;">mikeonerecords@gmail.com</a>
+                            <button type="button" id="copyEmailBtn" onclick="copyEmail()" style="padding:8px 16px;border-radius:100px;border:1px solid var(--gray-5);background:transparent;color:var(--gray-2);font-size:0.75rem;font-weight:500;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--gray-5)';this.style.color='var(--gray-2)'">Copy email</button>
+                        </div>
+                        <p id="copyConfirm" style="color:#4ade80;font-size:0.78rem;margin-top:10px;display:none;">✓ Email copied to clipboard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#top" class="logo">
+                        <span class="logo-mark">M</span>
+                        <span>Mike 1ne</span>
+                    </a>
+                    <p class="footer-tagline">Sound engineer and music producer based in Kampala, Uganda. Building records that travel — from the booth to the world.</p>
+                    <p class="footer-tagline" style="margin-top:10px; font-size:0.78rem; color:var(--gray-4); font-family:'JetBrains Mono', monospace;">
+                        Mike 1ne · CEO, 7H Music Group
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#label">7H Music Group</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#work">Discography</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#listen">Listen</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Work With Me</h4>
+                    <ul>
+                        <li><a href="#contact">Book a Session</a></li>
+                        <li><a href="epk-mike1ne.pdf" download target="_blank" rel="noopener">Download EPK</a></li>
+                        <li><a href="mailto:mikeonerecords@gmail.com">Submit a Demo</a></li>
+                        <li><a href="#contact">Feature Requests</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/mike.1ne_/" target="_blank" rel="noopener" class="social-link" title="Instagram" aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://open.spotify.com/artist/4DA5LBW4NWzVLcVSOrBLsI" target="_blank" rel="noopener" class="social-link" title="Spotify" aria-label="Spotify">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+                        </a>
+                        <a href="https://music.apple.com/search?term=mike%201ne" target="_blank" rel="noopener" class="social-link" title="Apple Music" aria-label="Apple Music">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a4.936 4.936 0 0 0-.347-.465c-.833-.95-1.99-1.322-3.107-1.485-1.11-.162-2.23-.166-3.348-.22a77.718 77.718 0 0 0-2.233-.066c-.376 0-.75.04-1.127.055v12.746c-.02.88-.296 1.74-.893 2.41-.687.78-1.697 1.178-2.71 1.12-.97-.055-1.833-.57-2.363-1.36-.54-.78-.71-1.79-.47-2.71.25-.94.92-1.7 1.82-2.1.63-.28 1.3-.35 1.96-.26.27.04.53.11.8.2V8.73c-.82-.15-1.66-.13-2.48.04-1.66.34-3.13 1.36-3.98 2.8-.87 1.45-1.03 3.22-.44 4.8.58 1.58 1.83 2.8 3.44 3.34 1.6.54 3.4.35 4.8-.52 1.35-.85 2.23-2.33 2.35-3.94V8.18c1.05.25 2.1.58 3.18.55 1.04-.02 2.03-.45 2.73-1.2.14-.15.25-.32.35-.5l.04-.08c.06-.11.09-.24.06-.36-.03-.15-.05-.3-.04-.46z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/results?search_query=Mike+1ne+producer+Uganda" target="_blank" rel="noopener" class="social-link" title="YouTube" aria-label="YouTube">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="mailto:mikeonerecords@gmail.com" class="social-link" title="Email" aria-label="Email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                    </div>
+                    <p style="margin-top:14px; font-size:0.72rem; color:var(--gray-4); font-family:'JetBrains Mono',monospace;">
+                        IG: <a href="https://www.instagram.com/mike.1ne_/" target="_blank" rel="noopener" style="color:var(--gray-2); text-decoration:none;">@mike.1ne_</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Mike 1ne / 7H Music Group. All rights reserved.</p>
+                <div class="footer-meta">
+                    <span><span class="pulse-dot"></span> Available for sessions</span>
+                    <span>Kampala, Uganda 🇺🇬</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+    (function() {
+        'use strict';
+
+        // Verified discography data. Credits cross-checked against Spotify/Apple Music/Deezer/YouTube metadata.
+        const works = [
+            { title: "Siteesa",             feat: "ft. Mike 1ne",                                          artist: "Tungi",                year: "2026", role: "feature",  roleLabel: "Featured",           link: "https://open.spotify.com/track/4GDB9tMylfRQavVoI6UOkq" },
+            { title: "PARADISE",            feat: "ft. Tungi",                                             artist: "Baranga",              year: "2026", role: "engineer", roleLabel: "Audio Engineer",     link: "https://open.spotify.com/track/54jxyHj4o2hL8WKmkV7WIL" },
+            { title: "Kampala",             feat: "ft. Deejay KLVN",                                       artist: "Baranga",              year: "2026", role: "writer",   roleLabel: "Co-Writer",          link: "https://music.apple.com/ug/artist/baranga/1764683984" },
+            { title: "Until the Morning",   feat: "ft. Joka & Mike 1ne",                                artist: "Tungi",                year: "2025", role: "feature",  roleLabel: "Featured / Prod.",   link: "https://open.spotify.com/track/7uSihuL3FIMY5E6knxHG20" },
+            { title: "LLWYMMD",             feat: "with Kai & River",                                      artist: "Mike 1ne",             year: "2025", role: "artist",   roleLabel: "Producer",           link: "https://open.spotify.com/track/3uwvjMRJZzw8wOjdmfjafC" },
+            { title: "Love in the Wrong Place", feat: "with Kai & River",                                  artist: "Mike 1ne",             year: "2025", role: "artist",   roleLabel: "Producer",           link: "https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd" },
+            { title: "Toxic Honey",         feat: "with Kai & River",                                      artist: "Mike 1ne",             year: "2025", role: "artist",   roleLabel: "Producer",           link: "https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd" },
+            { title: "Whispers of Betrayal",feat: "with Kai & River",                                      artist: "Mike 1ne",             year: "2025", role: "artist",   roleLabel: "Producer",           link: "https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd" },
+            { title: "Toxic Again",         feat: "with Kai & River",                                      artist: "Mike 1ne",             year: "2025", role: "artist",   roleLabel: "Producer",           link: "https://open.spotify.com/album/0TrL2jfJpf0FoBoVViirzd" },
+            { title: "Dance Di Night Away", feat: "",                                                       artist: "Mike 1ne",             year: "2025", role: "artist",   roleLabel: "Producer",           link: "https://open.spotify.com/track/3f3c0gzOcFO4MIOXhxuiTc" },
+            { title: "Whine",               feat: "ft. CXJ Powell",                                        artist: "Pajen & ST4NDO",       year: "2025", role: "engineer", roleLabel: "Vocal Engineer",     link: "https://music.apple.com/us/song/whine-feat-cxj-powell/1849080952" },
+            { title: "Gas Station Freestyle", feat: "ft. Tungi, Alvin Aijuka, Kerari K, Freezy F, Mike 1ne", artist: "THE TriBE WRLD",      year: "2026", role: "engineer", roleLabel: "Audio Engineer",     link: "https://youtu.be/qrAqE_f11Uw" },
+        ];
+
+        const roleClassMap = {
+            producer: 'role-producer',
+            engineer: 'role-engineer',
+            artist:   'role-artist',
+            writer:   'role-writer',
+            feature:  'role-feature'
+        };
+
+        const arrowSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>`;
+        const dashSvg  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>`;
+
+        function renderWorks(filter) {
+            filter = filter || 'all';
+            var list = document.getElementById('workList');
+            if (!list) return;
+            var filtered = filter === 'all'
+                ? works
+                : works.filter(function(w) {
+                    if (filter === 'producer') return w.role === 'producer' || w.role === 'artist';
+                    return w.role === filter;
+                });
+
+            list.innerHTML = filtered.map(function(w, i) {
+                var num = String(i + 1).padStart(2, '0');
+                var featStr = w.feat ? ' <span class="work-feat">' + w.feat + '</span>' : '';
+                var roleClass = roleClassMap[w.role] || '';
+                var linkAttrs = w.link
+                    ? 'href="' + w.link + '" target="_blank" rel="noopener noreferrer"'
+                    : '';
+                var tag = w.link ? 'a' : 'div';
+                var linkClass = w.link ? 'work-row' : 'work-row no-link';
+                var linkIcon = w.link ? arrowSvg : dashSvg;
+
+                return '<' + tag + ' class="' + linkClass + '" ' + linkAttrs + '>' +
+                    '<span class="work-num">' + num + '</span>' +
+                    '<span class="work-title">' + w.title + featStr + '</span>' +
+                    '<span class="work-artist">' + w.artist + '</span>' +
+                    '<span class="work-role-cell"><span class="work-role ' + roleClass + '">' + w.roleLabel + '</span></span>' +
+                    '<span class="work-year">' + w.year + '</span>' +
+                    '<span class="work-link">' + linkIcon + '</span>' +
+                    '</' + tag + '>';
+            }).join('');
+        }
+        renderWorks();
+        enhanceLinks(document.getElementById('workList'));
+
+        // Filters
+        var filtersEl = document.getElementById('workFilters');
+        if (filtersEl) {
+            filtersEl.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('filter-btn')) return;
+                document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+                e.target.classList.add('active');
+                renderWorks(e.target.getAttribute('data-filter'));
+                enhanceLinks(document.getElementById('workList'));
+            });
+        }
+
+        // Nav scroll state + back-to-top
+        var nav = document.getElementById('nav');
+        var backToTop = document.getElementById('backToTop');
+        var lastScroll = 0;
+        function onScroll() {
+            var y = window.scrollY || window.pageYOffset;
+            if (nav) nav.classList.toggle('scrolled', y > 30);
+            if (backToTop) backToTop.classList.toggle('show', y > 600);
+            lastScroll = y;
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Mobile menu with body scroll lock
+        var toggle = document.getElementById('menuToggle');
+        var menu = document.getElementById('mobileMenu');
+        function setMenuOpen(open) {
+            if (!toggle || !menu) return;
+            toggle.classList.toggle('open', open);
+            menu.classList.toggle('open', open);
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        if (toggle) {
+            toggle.addEventListener('click', function() {
+                var isOpen = menu.classList.contains('open');
+                setMenuOpen(!isOpen);
+            });
+        }
+        document.querySelectorAll('.mobile-link').forEach(function(link) {
+            link.addEventListener('click', function() { setMenuOpen(false); });
+        });
+        // Close menu on resize to desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 900) setMenuOpen(false);
+        });
+
+        // Scroll reveal — mobile-friendly thresholds
+        var isMobile = window.matchMedia('(max-width: 768px)').matches;
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: isMobile ? 0.02 : 0.08, rootMargin: isMobile ? '0px 0px -10px 0px' : '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+
+        // iOS blank-patch fix: force a minimal, non-destructive repaint
+        // after scroll settles. We do NOT touch body transform (that caused
+        // white/black tile patches on iOS Safari). Instead we toggle a
+        // transient class that nudges a cheap property on visible iframes.
+        var scrollTick = false;
+        var scrollTimeout = null;
+        window.addEventListener('scroll', function() {
+            if (scrollTick) return;
+            scrollTick = true;
+            if (scrollTimeout) clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(function() {
+                scrollTick = false;
+                // Cheap repaint trigger that doesn't create new GPU layers:
+                // briefly nudge opacity of visible iframes by a tiny amount.
+                document.querySelectorAll('iframe').forEach(function(f) {
+                    var r = f.getBoundingClientRect();
+                    if (r.top < window.innerHeight && r.bottom > 0) {
+                        f.style.opacity = '0.999';
+                        requestAnimationFrame(function() {
+                            setTimeout(function() { f.style.opacity = ''; }, 20);
+                        });
+                    }
+                });
+            }, 200);
+        }, { passive: true });
+
+        // Smooth scroll offset (for all anchor links)
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var id = this.getAttribute('href');
+                if (!id || id === '#' || id === '#top') return;
+                var target = document.querySelector(id);
+                if (target) {
+                    e.preventDefault();
+                    var navH = nav ? nav.offsetHeight : 72;
+                    var top = target.getBoundingClientRect().top + window.pageYOffset - navH;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Contact form — opens mailto
+        window.handleSubmit = function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var service = document.getElementById('service').value;
+            var assets = document.getElementById('assets').value;
+            var timeline = document.getElementById('timeline').value;
+            var message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !service || !assets || !timeline || !message) return false;
+
+            var serviceLabels = {
+                production: 'Music Production / Beats',
+                mixing: 'Mixing & Mastering',
+                vocals: 'Vocal Tracking / Production',
+                'artist-dev': 'Artist Development / Label',
+                post: 'Post-Production Audio',
+                exec: 'Executive Production',
+                other: 'Other'
+            };
+            var assetsLabels = {
+                'from-scratch': 'Need original instrumentals from scratch',
+                'raw-vocals':  'Have raw vocal stems recorded',
+                'mix-master':  'Need mixing & mastering only',
+                'full-ep':     'Planning a full EP / album rollout',
+                'not-sure':    'Not sure yet — needs guidance'
+            };
+            var timelineLabels = {
+                immediate: 'Immediate execution / within 2 weeks',
+                '30days':  'Within 30 days',
+                flexible:  'Flexible project roadmap'
+            };
+            var svcLabel = serviceLabels[service] || service;
+            var assetsLabel = assetsLabels[assets] || assets;
+            var timelineLabel = timelineLabels[timeline] || timeline;
+            var subject = 'Project Inquiry — ' + svcLabel;
+            var body = 'Hi Mike,\n\n' +
+                'Name: ' + name + '\n' +
+                'Email: ' + email + '\n' +
+                'Service: ' + svcLabel + '\n' +
+                'Assets status: ' + assetsLabel + '\n' +
+                'Target schedule: ' + timelineLabel + '\n\n' +
+                message + '\n\n— Sent from mike1ne.com';
+            var mailto = 'mailto:mikeonerecords@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+            // Open mail client
+            window.location.href = mailto;
+
+            // Show success after a short delay
+            setTimeout(function() {
+                var fc = document.getElementById('formContent');
+                var fs = document.getElementById('formSuccess');
+                if (fc) fc.style.display = 'none';
+                if (fs) fs.classList.add('show');
+            }, 300);
+
+            return false;
+        };
+
+        // --- External link auto-play enhancement ---
+        // When a user clicks a link to Spotify/YouTube, append params so the
+        // track/video starts playing immediately when the app/site opens.
+        function enhanceLinks(root) {
+            (root || document).querySelectorAll('a[href]').forEach(function(a) {
+                if (a.dataset.enhanced) return; // don't double-enhance
+                var href = a.getAttribute('href') || '';
+
+                // Spotify — go=1 forces Spotify web/app to play immediately
+                if (href.indexOf('open.spotify.com') !== -1) {
+                    if (a.closest('.listen-card')) return; // skip embed open links, they use context_play
+                    var sep = href.indexOf('?') === -1 ? '?' : '&';
+                    a.setAttribute('href', href + sep + 'go=1');
+                }
+
+                // YouTube short links (youtu.be/xxx) — autoplay=1
+                if (href.indexOf('youtu.be/') !== -1 && href.indexOf('autoplay') === -1) {
+                    var sep = href.indexOf('?') === -1 ? '?' : '&';
+                    a.setAttribute('href', href + sep + 'autoplay=1');
+                }
+
+                // YouTube full links (youtube.com/watch?v=) — autoplay=1
+                if (href.indexOf('youtube.com/watch') !== -1 && href.indexOf('autoplay') === -1) {
+                    var sep = href.indexOf('?') === -1 ? '?' : '&';
+                    a.setAttribute('href', href + sep + 'autoplay=1');
+                }
+
+                a.dataset.enhanced = '1';
+            });
+        }
+        enhanceLinks();
+
+        // --- Service cards: pre-select service in the contact form ---
+        document.querySelectorAll('.service-card[data-service]').forEach(function(card) {
+            card.addEventListener('click', function(e) {
+                var svc = card.getAttribute('data-service');
+                setTimeout(function() {
+                    var sel = document.getElementById('service');
+                    if (sel && svc) {
+                        sel.value = svc;
+                        // Smart default the "assets" field based on service to reduce friction
+                        var assets = document.getElementById('assets');
+                        if (assets) {
+                            if (svc === 'production' || svc === 'exec') assets.value = 'from-scratch';
+                            else if (svc === 'vocals') assets.value = 'raw-vocals';
+                            else if (svc === 'mixing' || svc === 'post') assets.value = 'mix-master';
+                            else if (svc === 'artist-dev') assets.value = 'full-ep';
+                        }
+                        // Bring focus to the name field for convenience
+                        var nameField = document.getElementById('name');
+                        if (nameField) nameField.focus();
+                        // Reset form success state if visible
+                        var fc = document.getElementById('formContent');
+                        var fs = document.getElementById('formSuccess');
+                        if (fc) fc.style.display = 'block';
+                        if (fs) fs.classList.remove('show');
+                    }
+                }, 450);
+            });
+        });
+
+        // --- Genre tabs in Listen section ---
+        var listenTabs = document.querySelectorAll('.listen-tab');
+        var listenPanels = document.querySelectorAll('.listen-panel');
+        listenTabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var panelId = tab.getAttribute('data-panel');
+                listenTabs.forEach(function(t) {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                listenPanels.forEach(function(p) { p.classList.remove('active'); });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                var panel = document.getElementById('panel-' + panelId);
+                if (panel) panel.classList.add('active');
+                // Lazy-load any iframes inside the newly visible panel that haven't been src'd yet
+                if (panel) panel.querySelectorAll('iframe[data-lazysrc]').forEach(function(f) {
+                    f.src = f.getAttribute('data-lazysrc');
+                    f.removeAttribute('data-lazysrc');
+                });
+            });
+        });
+
+        // --- A/B Before/After player (visual + stubbed until audio clips provided) ---
+        (function initAB() {
+            var waveEl = document.getElementById('abWaveform');
+            var playBtn = document.getElementById('abPlayBtn');
+            var playIcon = document.getElementById('abPlayIcon');
+            var metaEl = document.getElementById('abMeta');
+            var player = document.getElementById('abPlayer');
+            var statusText = document.getElementById('abStatusText');
+            var toggles = document.querySelectorAll('.ab-toggle');
+            var PLAY_SVG = '<path d="M8 5v14l11-7z"/>';
+            var PAUSE_SVG = '<path d="M6 4h4v16H6zM14 4h4v16h-4z"/>';
+
+            if (!waveEl || !playBtn) return;
+
+            // Build visual waveform (48 bars)
+            var barHeights = [];
+            for (var i = 0; i < 48; i++) {
+                // Pseudo-random but seeded so bars look natural & consistent
+                var h = 12 + Math.abs(Math.sin(i * 1.7) * 22) + (i % 5 === 0 ? 18 : 0) + Math.random() * 18;
+                h = Math.min(58, Math.max(10, h));
+                barHeights.push(Math.round(h));
+                var bar = document.createElement('div');
+                bar.className = 'ab-wave-bar';
+                bar.style.height = h + 'px';
+                waveEl.appendChild(bar);
+            }
+            var bars = waveEl.querySelectorAll('.ab-wave-bar');
+
+            var state = {
+                playing: false,
+                mode: 'raw',
+                pos: 0,
+                timer: null,
+                audio: null
+            };
+
+            // We don't ship real audio files by default (no fake content).
+            // If Mike later provides raw.mp3/final.mp3 this code will pick them up automatically.
+            var hasRealAudio = false; // set true when raw/final <audio> elements are added
+            if (metaEl) metaEl.textContent = hasRealAudio ? '0:00 / 0:24 · click to toggle A/B' : 'Demo clips loading soon';
+            if (player) player.classList.add('ab-state-raw');
+
+            function setMode(mode) {
+                state.mode = mode;
+                toggles.forEach(function(t) {
+                    var m = t.getAttribute('data-mode');
+                    var on = m === mode;
+                    t.classList.toggle('active', on);
+                    t.setAttribute('aria-pressed', on ? 'true' : 'false');
+                });
+                if (player) {
+                    player.classList.remove('ab-state-raw', 'ab-state-final');
+                    player.classList.add('ab-state-' + mode);
+                }
+            }
+            toggles.forEach(function(t) {
+                t.addEventListener('click', function() {
+                    setMode(t.getAttribute('data-mode'));
+                });
+            });
+
+            function animateLoop() {
+                if (!state.playing) return;
+                // Sweep a highlight across the bars as a visual playback indicator
+                var len = bars.length;
+                for (var i = 0; i < len; i++) {
+                    bars[i].classList.toggle('playing', i === state.pos);
+                }
+                state.pos = (state.pos + 1) % len;
+                state.timer = setTimeout(animateLoop, 180);
+            }
+            function stopVisual() {
+                if (state.timer) clearTimeout(state.timer);
+                state.timer = null;
+                bars.forEach(function(b) { b.classList.remove('playing'); });
+                state.pos = 0;
+            }
+
+            playBtn.addEventListener('click', function() {
+                state.playing = !state.playing;
+                if (state.playing) {
+                    playIcon.innerHTML = PAUSE_SVG;
+                    animateLoop();
+                    if (statusText) statusText.innerHTML = '<strong>Playing ' + (state.mode === 'raw' ? 'raw booth take' : 'final mastered record') + '.</strong> Toggle between the two to hear — or compare against — the processing chain.';
+                } else {
+                    playIcon.innerHTML = PLAY_SVG;
+                    stopVisual();
+                }
+            });
+        })();
+
+        // --- Click-to-play video overlays (works on iOS/Android/desktop) ---
+        // Tapping the play button injects the iframe with autoplay=1, which
+        // counts as a user gesture so mobile browsers allow playback.
+        function loadVideo(btn) {
+            var src = btn.getAttribute('data-src');
+            var type = btn.getAttribute('data-type');
+            var container = btn.parentElement;
+            if (!src || !container) return;
+            // Don't double-load
+            if (btn.classList.contains('loaded')) return;
+            btn.classList.add('loaded');
+
+            var iframe = document.createElement('iframe');
+            iframe.src = src;
+            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('webkitallowfullscreen', '');
+            iframe.setAttribute('mozallowfullscreen', '');
+            // Generous permissions — required for reliable iOS/Android autoplay of muted video
+            iframe.setAttribute('allow',
+                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen');
+            iframe.setAttribute('title', btn.getAttribute('aria-label') || 'Video');
+            iframe.setAttribute('loading', 'eager');
+
+            if (type === 'youtube') {
+                // Explicit width/height attributes (some iOS/Safari versions need them)
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;background:#000;display:block;z-index:2;';
+            } else {
+                // Instagram embed — lazily load their embed.js first time it's needed
+                if (!window.__igEmbedLoaded) {
+                    window.__igEmbedLoaded = true;
+                    var igScript = document.createElement('script');
+                    igScript.async = true;
+                    igScript.src = 'https://www.instagram.com/embed.js';
+                    igScript.referrerPolicy = 'no-referrer-when-downgrade';
+                    document.body.appendChild(igScript);
+                }
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.setAttribute('scrolling', 'no');
+                iframe.setAttribute('allowtransparency', 'true');
+                iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;background:#000;max-width:540px;margin:0 auto;display:block;z-index:2;';
+            }
+
+            // Fade out any thumbnails (CSS gradient OR real <picture>) and disable their pointer events
+            var thumb = container.querySelector('.thumb-grad');
+            var ytThumb = container.querySelector('.yt-thumb-img');
+            if (thumb) { thumb.classList.add('faded'); thumb.style.opacity = '0'; thumb.style.pointerEvents = 'none'; }
+            if (ytThumb) { ytThumb.classList.add('faded'); ytThumb.style.opacity = '0'; ytThumb.style.pointerEvents = 'none'; }
+
+            container.appendChild(iframe);
+
+            // Clean up overlay/thumbs after the fade completes. This is critical on
+            // iOS/Android because a transparent overlay covering the iframe will
+            // intercept taps on the YouTube player's own play/pause/controls.
+            setTimeout(function() {
+                if (thumb) thumb.remove();
+                if (ytThumb) ytThumb.remove();
+                // Fade out the button first so it doesn't just blink away
+                btn.style.transition = 'opacity 0.3s';
+                btn.style.opacity = '0';
+                btn.style.pointerEvents = 'none';
+                setTimeout(function() { btn.remove(); }, 320);
+            }, 420);
+        }
+
+        function bindVideoTrigger(el, btn) {
+            if (!el || !btn) return;
+            function fire(e) { e.preventDefault(); e.stopPropagation(); loadVideo(btn); }
+            el.addEventListener('click', fire);
+            el.addEventListener('touchend', fire, { passive: false });
+        }
+
+        document.querySelectorAll('.play-overlay').forEach(function(btn) {
+            bindVideoTrigger(btn, btn);
+            // Make sure taps on the play button or label inside also trigger.
+            // We don't double-bind because loadVideo guards against re-entry.
+            btn.querySelectorAll('.play-overlay-btn, .play-overlay-label').forEach(function(child) {
+                bindVideoTrigger(child, btn);
+            });
+        });
+
+        // Copy email fallback
+        window.copyEmail = function() {
+            var email = 'mikeonerecords@gmail.com';
+            var confirmEl = document.getElementById('copyConfirm');
+            var btn = document.getElementById('copyEmailBtn');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(email).then(function() {
+                    if (confirmEl) confirmEl.style.display = 'block';
+                    if (btn) btn.textContent = 'Copied ✓';
+                }).catch(function() { fallback(); });
+            } else {
+                fallback();
+            }
+            function fallback() {
+                var ta = document.createElement('textarea');
+                ta.value = email;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); } catch(e) {}
+                document.body.removeChild(ta);
+                if (confirmEl) confirmEl.style.display = 'block';
+                if (btn) btn.textContent = 'Copied ✓';
+            }
+        };
+    })();
+    </script>
+</body>
+</html>
